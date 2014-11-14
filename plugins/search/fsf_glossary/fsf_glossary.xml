@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="search">
+  <name>Search - Freestyle FAQs: Glossary</name>
+  <creationDate>2014 01 08</creationDate>
+  <authorEmail>support@freestyle-joomla.com</authorEmail>
+  <authorUrl>http://www.freestyle-joomla.com</authorUrl>
+  <author>Freestyle Joomla</author>
+  <copyright>Copyright Freestyle Joomla 2010</copyright>
+  <license>Please see http://www.freestyle-joomla.com/license for software license</license>
+  <version>1.11.9.1786</version>
+  <description>Search - Freestyle FAQs: Glossary</description>
+  <files>
+    <filename plugin="fsf_glossary">fsf_glossary.php</filename>
+  </files>
+  <params>
+  </params>
+</extension>

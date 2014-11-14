@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.7.0" client="site" method="upgrade">
+	<name>Sj Vm Extra Slider Responsive</name>
+	<creationDate>January 2013</creationDate>
+	<author>YouTech Company</author>
+	<copyright>Copyright (c) 2012 YouTech Company</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>contact@ytcvn.com</authorEmail>
+	<authorUrl>http://www.smartaddons.com</authorUrl>
+	<version>2.5</version>
+	<description>SJ_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_sj_vm_extraslider_res">mod_sj_vm_extraslider_res.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>core</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages />
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_sj_vm_extraslider_res/core/fields">
+			
+			<fieldset name="basic">
+                <field name="item_link_target" type="list" default="_self" label="Open Link" description="The Type shows when you click on the link">
+                    <option value="_blank">New Window</option>
+                    <option value="_self">Same Window</option>
+                </field>	
+                <field name="button_page" type="list" default="" label="Button page" description=" button page">
+                    <option value="top">Top</option>
+                    <option value="under">Under</option>
+                </field>                			
+                <field name="effect" type="radio" class="btn-group" default="slide" label="Effect" description="effect">
+                    <option value="slide">Slide</option>
+                    <option value="fade">Fade</option>
+                </field>                              
+                <field name="theme" type="list" default="style4" label="Articles Style" description="">
+                    <option value="style1">Layout1</option>
+                    <option value="style2">Layout2</option>
+                    <option value="style4">Layout3</option>
+                    <option value="style7">Layout4</option>
+                    <option value="style9">Layout5</option>
+                    <option value="style10">Layout6</option>  
+                    <option value="style11">Layout7</option>                   
+                </field> 				
+			</fieldset>
+			
+			<fieldset name="source" label="Source Options">
+				<field name="source_category" type="sjvmcategories" multiple="multiple" size="10" default="" label="Data Source" description="Select category" />
+				<field name="subcategories" type="radio" default="0" label="Include subcategories" description="Including products belonging to sub-categories.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="source_order" type="list" default="group.topten" label="Product Order By" description="Sort product by one of these.">
+					 <option value="group.topten">Best sales</option>
+					<option value="group.featured">Featured</option>
+				    <option value="group.latest">Latest</option>
+				    <option value="group.random">Random</option>
+					<option value="ordering">Ordering</option>
+					<option value="product_price">Product Price</option>
+				</field>
+				<field name="source_limit" type="text" default="20" label="Limitation" description="Maximum number of products to display. Enter 0 for unlimited selection." />
+				<field name="num_rows" type="text" default="2" label="Items Per Row" description="The item which you want to show items on a row. The value is from 1 to the total of items" />
+				<field name="num_cols" type="integer" first="1" last="6" step="1" default="3" label="Items Per Column" description="The item which you want to show items per row on a page. The value is from 1 to the total of items per column" />
+			</fieldset>
+			
+			<fieldset name="Content Options" label="Items Options">
+				<field name="title_slider_display" type="radio" default="1" label="Show Title of Slider" description="Show Title Of Slider">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="title_slider" type="text" default="Latest News" label="Title of Slider" description="Display Title Of Slider" />
+				<field name="item_title_display" type="radio" default="1" label="Title Display" description="Show Item Title">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_title_max_characs" type="text" default="25" label="Title Maxlength" description="Max length of title by characters. Enter value 0 if you want to show all. Please enter integer number >= 0." />
+				<field name="item_desc_display" type="radio" default="1" label="Show Desc" description="Show Description of Item">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_desc_max_characs" type="text" default="200" label="Description Maxlength" description="Max length of description by characters. Enter value 0 if you want to show all. Please enter integer number >= 0." />
+				<field name="item_description_striptags" type="radio" default="1" label="Strip Html Tags" description="Remove all markup in description of item. Choose 'No' if you don't want.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_description_keeptags" type="textarea" default="" label="Keep on Strip Tags" description="If you are using 'Strip html tags'='Yes'. Please enter &amp;lt;tagname&amp;gt; if you want keep it. Eg: '&amp;lt;p&amp;gt; &amp;lt;a&amp;gt;' for keep p and a" filter="raw" />							
+				<field name="item_price_display" type="radio" default="1" label="Show Price" description="Show Base Price With Tax and Sales Price">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>				
+				<field name="item_readmore_display" type="radio" default="1" label="Show Read More" description="Show Read More">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_readmore_text" type="text" default="Readmore" label="Read More Text" description="Read More Text" />
+			</fieldset>
+			
+			<fieldset name="image_option" label="Image Options">
+				<field name="item_image_display" type="radio" default="1" label="Image Display" description="Show Image">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_image_width" type="text" default="200" label="Image Width" description="Image width" />
+				<field name="item_image_height" type="text" default="250" label="Image Height" description="Image height" />
+				<field name="item_image_background" type="text" default="#FFFFFF" label="Image Background" description="Image background color" />
+				<field name="item_image_function" default="stretch" type="sjthumbnailmode" label="Image Resize Mode">
+					<option value="none">None</option>
+					<option value="center">Center</option>
+					<option value="fill">Fill</option>
+					<option value="fit">Fit</option>
+					<option value="stretch">Stretch</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="advanced">
+			    <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" />
+				<field name="include_jquery" type="radio" default="1" label="Include jQuery" description="Do you want include jQuery library?">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+                <field name="layout" type="modulelayout" default="basic" class="btn-group" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />				
+				<field name="custom" type="custom" fields="id,url" default="" label="Custom" description="Override url of specific item. Enter ID of item and url will be open. Be careful with this function." />
+				<field name="pretext" type="textarea" default="" label="Pre-text" description="Intro text of module" cols="40" rows="4" filter="raw" />
+				<field name="posttext" type="textarea" default="" label="Post-text" description="Footer text of module" cols="40" rows="4" filter="raw" />
+				<field name="owncache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+			
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,172 @@
+/*---------------------------------------------------------------- 
+  Copyright:
+  Copyright (C) 2008 IceTheme. All Rights Reserved
+  
+  License:
+  Copyrighted Commercial Software 
+  
+  Author:
+  IceTheme - http://wwww.icetheme.com
+---------------------------------------------------------------- */
+
+/* General Forsm Styles */
+label { 
+  font-weight: normal;}
+
+fieldset { 
+  padding:1.4em;
+  margin: 1em 0 1.5em .2em;
+  border:1px dotted #DADABD}
+  
+legend  { 
+  font-size:1.5em;
+  color:#777;
+  border:1px dotted #DADABD;
+  padding:0.3em 1em 0.3em}
+
+
+/* Text fields */
+.inputbox,
+input[type="text"],
+input[type="email"], 
+input[type="password"]  {
+  color:#999;
+  background:#fff;
+  border:1px solid #E3E3CD;
+  margin:0 0.25em 0 0;
+  padding:4px 7px;
+  -moz-transition: all .4s ease-in;
+  -o-transition: all .4s ease-in;
+  -webkit-transition: all .4s ease-out;
+  transition: all .4s ease-in;}
+  .inputbox:hover,
+  .inputbox:focus,
+  input[type="text"]:hover,
+  input[type="text"]:focus,
+  input[type="email"]:hover,
+  input[type="email"]:focus,
+  input[type="password"]:hover,
+  input[type="password"]:focus  {
+    color:#555;
+    box-shadow:0 0 12px #DADABD;
+    background:#fff}
+
+    
+    
+textarea {
+  color:#999;
+  background:#fff;
+  border:1px solid #E3E3CD;
+  margin:0 0.25em 0 0;
+  padding:7px;
+  -moz-transition: all .4s ease-in;
+  -o-transition: all .4s ease-in;
+  -webkit-transition: all .4s ease-in;
+  transition: all .4s ease-in; }
+  textarea:hover,
+  textarea:focus { 
+    color:#555;
+    box-shadow:0 0 12px #DADABD;
+    background:#fff}
+
+
+select {
+  color:#999;
+  background:#fff;
+  border:1px solid #E3E3CD;
+  padding:3px 2px 3px 2px;
+  outline:none;}
+  select option {
+    color:#555;
+    background:#fff;}
+  select:focus { }
+
+/* Other */
+form p img {
+  float:none;
+  margin:0;
+  vertical-align:middle}
+
+
+
+/* Success, Notice and Error Form Messages */
+div.success,
+p.success,
+div.notice,
+p.notice,
+div.error,
+p.error { 
+  padding:.6em 1em 0.6em 3.4em;
+  box-shadow:inset -1px -1px 0 #fff, inset 1px 1px 0 #fff ;
+  border:1px solid #fff;
+  margin-bottom: 2em;}
+  div.success,
+  p.success { 
+    color: #264409;
+    background:#E6EFC2 url(../images/typo_success.png) no-repeat 10px center;
+    border:1px solid #CEE086;}
+  div.notice,
+  p.notice { 
+    color: #514721;
+    background:#FFF6BF url(../images/typo_note.png) no-repeat 10px center;
+    border:1px solid #FFDE24;}
+  div.error,
+  p.error { 
+    color: #8A1F11;
+    background:#FBE3E4 url(../images/typo_error.png) no-repeat 10px center;
+    border:1px solid #F5B7B8;}
+
+
+
+/* Buttons 
+------------ */
+button,
+input.button,
+a.button,
+a.vm-button-correct,
+input[type="submit"]{
+  font-family:Verdana, Geneva, sans-serif;
+  background:#2F6195;
+  box-shadow:inset -1px -1px 0 rgba(255,255,255,.3), inset 1px 1px 0 rgba(255,255,255,.3);
+  border:1px solid #2F6195;
+  color:#fff;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+  display:inline-block;
+  padding:3px 12px 5px; 
+  cursor:pointer;
+  font-size:1.1em;
+  margin:0 .25em;
+  white-space:nowrap;
+  text-decoration:none;
+  -moz-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out; }
+  
+  button:hover,
+  input.button:hover,
+  a.button:hover,
+  a.vm-button-correct,
+  input[type="submit"]:hover {
+    box-shadow:inset -1px -1px 0 rgba(255,255,255,.7), inset 1px 1px 0 rgba(255,255,255,.7);}
+    
+    button:focus,
+    input.button:focus,
+    a.button:focus,
+    input[type="submit"]:focus { }
+  
+
+  
+    /* cart button
+    for the VM component */
+    span.addtocart-button .addtocart-button {
+      background:#59751b url(../images/cart_button.png) no-repeat 6% 35%;
+      padding-left:28px;
+      text-shadow:none;
+      border-color:#59751b;}
+      
+      span.addtocart-button .addtocart-button:hover {
+        background:#59751b url(../images/cart_button.png) no-repeat 6% 35%!important;}
+      
+      
+      

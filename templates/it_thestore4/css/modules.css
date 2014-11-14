@@ -1,0 +1,333 @@
+/*---------------------------------------------------------------- 
+  Copyright:
+  Copyright (C) 2008 - 2012 IceTheme. All Rights Reserved
+  
+  License:
+  Copyrighted Commercial Software 
+  
+  Author:
+  IceTheme - http://wwww.icetheme.com
+---------------------------------------------------------------- */
+
+/* ---------------------- modules.css --------------------------
+This CSS file contain the codes that Joomla uses to output its 
+modules. Normally the module positons found here are: left, right,
+bottom, promo, showcase etc.
+
+- Feel free to make changes to suit the needs to your website
+project
+---------------------------------------------------------------- */
+
+/* general styles for the modules */
+.width100     { width:100%}
+.width50    { width:50%}
+.width33    { width:33.33%}
+.width25    { width:25%}
+.width20    { width:20%}
+
+
+
+/* -- Promo  -- 
+used on the "promo" module positions */
+#promo .modules-wrap {
+  position:relative;
+  overflow:hidden;
+  margin:0 -12px}
+
+#promo .moduletable {
+  position:relative;
+  padding:0 12px;}
+  
+  #promo .separator .moduletable {}
+
+    
+    #promo .moduletable h3.mod-title{
+      font-size:1.4em;
+      padding:0;
+      padding:0;
+      margin-bottom:7px;
+      color:#77842B;}
+      
+      #promo .moduletable h3.mod-title span  {
+        color:#999;
+        letter-spacing:0;
+        text-transform:none;
+        font-family:Arial, Helvetica, sans-serif;
+        display:block;
+        font-size:13px;
+        line-height:1.6em;
+        margin-bottom:8px;
+        margin-top:-3px;} 
+        
+        #promo  .moduletable p:last-child {
+           margin-bottom:0}    
+
+
+
+/* -- Bottom  -- 
+used on the "bottom" module positions */
+#bottom .modules-wrap {
+  position:relative;
+  overflow:hidden;
+  margin:15px -12px 0}
+  
+  #bottom .moduletable{
+    padding:0 12px;
+    position: relative}
+    
+    #bottom .moduletable h3.mod-title{
+      font-size:1.4em;
+      padding:0;
+      padding:0;
+      margin-bottom:7px;}
+      
+      #bottom .moduletable h3.mod-title span  {
+        color:#999;
+        letter-spacing:0;
+        text-transform:none;
+        font-family:Arial, Helvetica, sans-serif;
+        display:block;
+        font-size:13px;
+        line-height:1.6em;
+        margin-bottom:8px;
+        margin-top:-3px;} 
+        
+        #bottom   .moduletable p:last-child {
+           margin-bottom:0}    
+  
+                
+/* 
+Col Modules
+--------------
+The columns modules are used on the "left" and "right" positions.
+Normally they may contain suffixes which you may add through each 
+module on their paramenters so that you may have different module
+styles. 
+---------------------------------------------------------------- */
+
+/* on the "left" position */
+ .col-module {
+  position:relative;
+   margin:0 0 20px;
+   background:#fff;}  
+   
+    .col-module:last-child,
+    .col-module:last-child .col-module-suffix-style3  {
+      margin-bottom:0}
+  
+  
+      /* with no suffix */
+    .col-module .col-module-header {
+      margin-bottom: 10px;
+      padding:4px 10px;
+      background:#879631;
+      position:relative;}
+      
+    .col-module .col-module-header:after {
+      border-style: dashed;
+      border-color: transparent;
+      border-width: 0.8em;
+      border-top-width: .8em;
+      border-top-style: solid;
+      border-top-color: #586737;
+      content: "";
+      display: inline-block;
+      height: 0;
+      left: 10px;
+      line-height: 0;
+      position: absolute;
+      bottom: -17px;
+      vertical-align: middle;
+      width: 0;}    
+      
+    .col-module .col-module-header:before {
+        background-image: linear-gradient(bottom, rgb(255,255,255) 36%, rgb(225,229,203) 100%, rgb(225,229,203) 100%);
+        background-image: -o-linear-gradient(bottom, rgb(255,255,255) 36%, rgb(225,229,203) 100%, rgb(225,229,203) 100%);
+        background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 36%, rgb(225,229,203) 100%, rgb(225,229,203) 100%);
+        background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 36%, rgb(225,229,203) 100%, rgb(225,229,203) 100%);
+        background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 36%, rgb(225,229,203) 100%, rgb(225,229,203) 100%);
+        bottom: -16px;
+        content: "";
+        left:0;
+        display: inline-block;
+        height: 15px;
+        line-height: 0;
+        position: absolute;
+        vertical-align: middle;
+        width: 100%;}  
+        
+       .col-module .col-module-header h3.mod-title {
+        font-size:1.2em;
+        color:#fff;
+        text-shadow:1px 1px 0px rgba(0,0,0,.5);
+        margin:3px 0;
+        padding-left:0;
+        padding-bottom:0;}
+  
+      
+        /* subtitles */
+        .col-module-header  h3.mod-title span {
+          letter-spacing:0;
+          text-transform:none;
+          display:block;
+          font-family:Arial, Helvetica, sans-serif;
+          text-shadow:none;
+          font-size:13px;
+          line-height:1.6em;
+          margin-bottom:1px;
+          margin-top:-4px;
+          color:#DBE026;} 
+        
+
+      .col-module .col-module-content {
+       
+        padding:4px 10px;
+        clear:both;
+        position:relative}  
+
+          
+    /* with suffix "style1*/        
+    .col-module .col-module-suffix-style1 .col-module-header {  
+      background:#295482;}
+      
+      .col-module .col-module-suffix-style1 .col-module-header:after {
+        border-top-color: #295482;}    
+        
+      .col-module .col-module-suffix-style1 .col-module-header:before {
+        background-image: linear-gradient(bottom, rgb(255,255,255) 36%, rgb(201,212,224) 100%, rgb(201,212,224) 100%);
+        background-image: -o-linear-gradient(bottom, rgb(255,255,255) 36%, rgb(201,212,224) 100%, rgb(201,212,224) 100%);
+        background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 36%, rgb(201,212,224) 100%, rgb(201,212,224) 100%);
+        background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 36%, rgb(201,212,224) 100%, rgb(201,212,224) 100%);
+        background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 36%, rgb(201,212,224) 100%, rgb(201,212,224) 100%);}  
+        
+      .col-module .col-module-suffix-style1 .col-module-header  h3.mod-title span {
+        color: #A9C8E4;}       
+      
+      
+      
+    /* with suffix "style2 */  
+    .col-module-suffix-style2{        
+      background:#f2f2e6 url(../images/header.jpg) repeat center top;
+      border: 1px solid #d1d1c0;
+      box-shadow:inset #fff 0 0 2px;
+      border-radius:10px;
+      padding:10px;
+      margin-bottom:15px;
+      color:#777;}
+        
+      .col-module .col-module-suffix-style2 .col-module-header { background:none; padding:0; margin-bottom:6px}        
+      .col-module .col-module-suffix-style2 .col-module-header:before { display:none;}  
+      .col-module .col-module-suffix-style2 .col-module-header:after { display:none;}
+      
+        .col-module-suffix-style2 h3 {
+          color:#777!important;
+          padding-top:0!important;
+          padding-left:0px!important;  
+          text-shadow:none!important;}  
+        
+        .col-module-suffix-style2 .col-module-header h3 span {
+          color:#777}  
+        
+        
+      /* style 3 */
+      .col-module-suffix-style3 {
+        background:#879631;
+        color:#fff;
+        color:rgba(255,255,255,.75);
+        border:5px solid #A3AF54;    
+        padding:10px;
+        margin-bottom:15px;
+        border-radius:10px;}
+        
+      .col-module .col-module-suffix-style3 .col-module-header { background:none; padding:0; margin-bottom:6px}
+      .col-module .col-module-suffix-style3 .col-module-header:before {display:none;}  
+      .col-module .col-module-suffix-style3 .col-module-header:after {display:none;}
+      
+        .col-module .col-module-suffix-style3 .col-module-header h3.mod-title {
+          color:#fff;
+          text-shadow:1px 1px 0px rgba(0,0,0,.5);          
+          padding-left:0;
+          padding-top:0;}
+          
+          .col-module .col-module-suffix-style3 .col-module-header h3.mod-title span {
+            color: #DBE026;}
+        
+          .col-module .col-module-suffix-style3 .col-module-content a,
+          .col-module .col-module-suffix-style3 .col-module-content a:visited,
+          .col-module .col-module-suffix-style3 .col-module-content a:hover  {
+            color:#FFFB00}
+          
+    
+    /* remove extra spacing from col modules */
+    .col-module .col-module-content p:last-child {
+      margin-bottom:0}
+    
+    
+    
+/* -----------------
+ Footer Modules
+ used module positions are footer1, footer2, footer3 and footer4, and footer5
+----------------- */
+#footer .modules-wrap {
+  position:relative;
+  overflow:hidden;
+  padding: 25px 0 25px;
+  margin-right:-20px;}
+  
+#footer .separator .moduletable {
+  position:relative;}
+  
+  #footer .moduletable {
+    padding-right:10px;
+    color:#777;
+    margin-right:10px;}
+     
+    #footer .moduletable .moduletable-header {
+      margin-bottom:8px;}
+
+     
+        #footer .moduletable h3.mod-title {
+          color: #77842B;
+          font-size: 1.3em;
+          margin: 0 0 7px;
+          padding: 0 10px 0 0;}
+        
+          #footer .moduletable h3.mod-title span {
+            display: block;
+            color:#999;
+            font-family: Arial,Helvetica,sans-serif;
+            font-size: 13px;
+            font-style: italic;
+            letter-spacing: 0;
+            line-height: 1.6em;
+            margin-bottom: 0;
+            margin-top: -3px;
+            text-transform: none;} 
+                
+        
+        #footer .moduletable img {
+          float:left;
+          margin:5px 10px 10px 0}
+              
+        
+        
+        #footer > div:last-child .moduletable-header {
+          border:none}
+    
+    
+  
+
+/* -----------------
+ Ice Modules
+ used for IceTheme Extensions like IceCaption, IceTabs etc
+----------------- */
+.ice-module {} 
+
+    
+  .ice-module h3.mod-title {
+    text-align:center;
+    color:#666;
+    padding-bottom:2px;}
+  
+    .ice-module h3.mod-title span {} 
+      

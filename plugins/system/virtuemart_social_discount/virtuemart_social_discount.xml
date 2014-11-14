@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5" group="system">
+	<name>System - VirtueMart Social Discount</name>
+	<creationDate>2012-09-15</creationDate>
+	<author>Thakker Technologies</author>
+	<authorEmail>info@thakkertech.com</authorEmail>
+	<authorUrl>http://www.thakkertech.com</authorUrl>
+	<copyright>(C)2012 Thakker Technologies. All rights reserved.</copyright>
+	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+	<trackerUrl>http://www.thakkertech.com/forum/4-joomla-extensions-bug-report.html</trackerUrl>
+	<modifiedDate>2013-01-30</modifiedDate>
+	<version>2.5.5</version>
+	<description>Plugin VirtueMart Social Discount for Joomla 2.5.</description>
+	<files>
+		<filename plugin="virtuemart_social_discount">virtuemart_social_discount.php</filename>
+		<filename>index.html</filename>
+	</files>
+</extension>

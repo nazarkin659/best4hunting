@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6" method="upgrade" client="site">
+    <name>mod_virtuemart_magiczoom</name>
+    <creationDate>2013-04-25</creationDate>
+    <author>www.magictoolbox.com</author>
+    <authorEmail>support@magictoolbox.com</authorEmail>
+    <authorUrl>http://www.magictoolbox.com</authorUrl>
+    <copyright>Copyright (C) 2013 Magic Toolbox. All rights reserved.</copyright>
+    <license>http://www.magictoolbox.com/license</license>
+    <version>4.7.3</version>
+    <releaseDate>2014-09-25</releaseDate>
+    <description>MOD_VIRTUEMART_MAGICZOOM_DESCRIPTION</description>
+    <languages folder="language">
+        <language tag="en-GB">en-GB.mod_virtuemart_magiczoom.ini</language>
+        <language tag="en-GB">en-GB.mod_virtuemart_magiczoom.sys.ini</language>
+    </languages>
+    <media folder="media" destination="mod_virtuemart_magiczoom">
+        <filename>graphics/arrows-big.png</filename>
+        <filename>graphics/arrows-padding.png</filename>
+        <filename>graphics/arrows-small.png</filename>
+        <filename>graphics/arrows.png</filename>
+        <filename>graphics/hint.gif</filename>
+        <filename>graphics/index.html</filename>
+        <filename>graphics/loader.gif</filename>
+        <filename>magicscroll.css</filename>
+        <filename>magicscroll.js</filename>
+        <filename>magictoolbox.utils.js</filename>
+        <filename>magiczoom.css</filename>
+        <filename>magiczoom.js</filename>
+        <filename>module.css</filename>
+    </media>
+    <files folder="site">
+        <filename>classes/index.html</filename>
+        <filename>classes/magicscroll.module.core.class.php</filename>
+        <filename>classes/magictoolbox.attributeshelper.class.php</filename>
+        <filename>classes/magictoolbox.imagehelper.class.php</filename>
+        <filename>classes/magictoolbox.params.class.php</filename>
+        <filename>classes/magictoolbox.templatehelper.class.php</filename>
+        <filename>classes/magiczoom.module.core.class.php</filename>
+        <filename>index.html</filename>
+        <filename module="mod_virtuemart_magiczoom">mod_virtuemart_magiczoom.php</filename>
+        <filename>templates/bottom.tpl.php</filename>
+        <filename>templates/index.html</filename>
+        <filename>templates/left.tpl.php</filename>
+        <filename>templates/right.tpl.php</filename>
+        <filename>templates/top.tpl.php</filename>
+    </files>
+</extension>

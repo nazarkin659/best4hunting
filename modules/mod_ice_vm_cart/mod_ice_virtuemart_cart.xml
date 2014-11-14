@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" client="site" method="upgrade">
+<name>IceVMcart</name>
+    <creationDate>March 2012</creationDate>
+    <author>IceTheme</author>
+    <authorEmail>suppport@icetheme.com</authorEmail>
+    <authorUrl>http://www.icetheme.com</authorUrl>
+    <copyright>GNU / GPL</copyright>
+    <license>Open Source License, GNU GPL</license>
+    <version>2.5.0</version>
+    <description>Enhanced Virtuemart Cart Module by IceTheme with ajax and the ability to show products on the cart with a dropdown box</description>
+    <files>
+        <filename module="mod_ice_virtuemart_cart">mod_ice_virtuemart_cart.php</filename>
+        <folder module="mod_ice_virtuemart_cart">assets</folder>
+		<folder module="mod_ice_virtuemart_cart">tmpl</folder>
+        <filename>ajax.php</filename>
+        <filename>index.html</filename>
+		<filename>CHANGELOG.php</filename>
+		<filename>LICENSE.php</filename>
+    </files>
+    <languages>
+        <language tag="en-GB">languages/en-GB/en-GB.mod_ice_virtuemart_cart.ini</language>
+    </languages>     
+    <config>
+        <fields name="params">
+            <fieldset name="basic">  
+			
+				<field name="vm_cart_empy" type="text" label="CART_EMPTY" description="CART_EMPTY_DESC" /> 
+					
+				<field name="dropdown" type="radio" label="DROPDOWN" description="DROPDOWN_DESC" default="1">
+					<option value="0">LNO</option>
+					<option value="1">LYES</option>
+				</field>
+				<field name="popup_top" type="text" default="150" label="VM_POPUP_TOP" description="VM_POPUP_TOP_DESC"/>
+				
+			<field name="" type="spacer" default="" label="" description="" />
+			<field name="" type="spacer" default="" label="" description="" />
+			
+				<field name="ajax" type="radio" label="USE_AJAX" description="USE_AJAX_DESC" default="1">
+					<option value="0">LNO</option>
+					<option value="1">LYES</option>
+				</field>
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />   
+
+            </fieldset> 
+        </fields>
+    </config>     
+</extension>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>VP One Page Checkout</name>
+	<author>VirtuePlanet Services LLP</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright © 2012 - 2014 VirtuePlanet Services LLP. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@virtueplanet.com</authorEmail>
+	<authorUrl>www.virtueplanet.com</authorUrl>
+	<version>2.3</version>
+	<description><![CDATA[ 
+		<link href="../plugins/system/vponepagecheckout/assets/css/admin.css" rel="stylesheet" type="text/css" media="all" />
+		
+		<div class="template_image_container">
+			<img src="../plugins/system/vponepagecheckout/assets/images/plugin_thumbnail.png" alt="VP One Page Checkout" />
+		</div>
+		<h1 class="template-titile">VP One Page Checkout<span>(Ver 2.3)</span></h1>
+		<p class="desc-text">VP One Page Checkout is a responsive and ajax based one page checkout Joomla 2.5 plugin for VirtueMart 2.0/2.6. Just install and enable the plugin in your VirtueMart 2.0 and it wil immediately start working. This is a commercial plugin released for VirtuePlanet Club Members.</p>
+		<p class="desc-text">Please refer to the <strong>User Guide</strong> availble under the Download section of the site for detailed installation and configuration process of this template. If you need any support please contact us through our <a href="http://www.virtueplanet.com/forum/" target="_blank">Support Forum</a>.</p>
+		<p class="copy-text">Copyright © 2012 - 2014 <a href="http://www.virtueplanet.com" target="_blank">VirtuePlanet</a> Services LLP. All Rights Reserved.</p>			
+	]]></description>
+	<files>
+		<filename plugin="vponepagecheckout">vponepagecheckout.php</filename>
+		<filename>index.html</filename>
+		<folder>cart</folder>
+		<folder>assets</folder>
+		<folder>fields</folder>
+	</files>
+	<languages folder="language">
+		<language tag="de-DE">languages/de-DE.plg_vponepagecheckout.ini</language>
+		<language tag="en-GB">languages/en-GB.plg_vponepagecheckout.ini</language>
+		<language tag="en-US">languages/en-US.plg_vponepagecheckout.ini</language>
+		<language tag="en-AU">languages/en-AU.plg_vponepagecheckout.ini</language>
+		<language tag="es-ES">languages/es-ES.plg_vponepagecheckout.ini</language>
+		<language tag="fr-FR">languages/fr-FR.plg_vponepagecheckout.ini</language>
+		<language tag="el-GR">languages/el-GR.plg_vponepagecheckout.ini</language>		
+		<language tag="it-IT">languages/it-IT.plg_vponepagecheckout.ini</language>
+		<language tag="pt-BR">languages/pt-BR.plg_vponepagecheckout.ini</language>
+		<language tag="th-TH">languages/th-TH.plg_vponepagecheckout.ini</language>
+		<language tag="nl-NL">languages/nl-NL.plg_vponepagecheckout.ini</language>
+		<language tag="ru-RU">languages/ru-RU.plg_vponepagecheckout.ini</language>
+		<language tag="hu-HU">languages/hu-HU.plg_vponepagecheckout.ini</language>
+	</languages>	
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="style" type="list" default="1" label="Layout Style" description="Select your layout style">
+                    <option value="1">Style 1</option>
+                    <option value="2">Style 2</option>
+                </field>
+                <field name="color" type="list" default="1" label="Color Style" description="Select your color style">
+                    <option value="1">Light</option>
+                    <option value="2">Dark</option>
+                </field>
+                <field name="responsive" type="radio" default="1" label="Responsive Layout" description="Confirm if your Joomla Template is responsive." class="button-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>	
+                <field name="field_grouping" type="radio" default="1" label="Address Field Grouping" description="If this is enabled then the address fields like name prefix, first name, last name, middle name, city, zip etc will be grouped together and displayed side by side." class="button-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="check_shipto_address" type="radio" default="1" label="Use Bill To address as Ship To address by default" description="If this is enabled the checkbox for user bill to as ship to will be checked by default." class="button-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="oncheckout_show_steps" type="radio" default="1" label="Show Checkout Steps" description="Disable checkout steps during checkout" class="button-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>								
+                <field name="registration_by_default" type="radio" default="0" label="Registration Form Displayed by Default" description="In the cart page guest checkout is selected by default. If you enable this option then user registration form will be selected by default." class="button-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="only_guest" type="radio" default="0" label="Hide Registration and Login Area." description="Hide Registration and Login area. Enable only Guest Checkout." class="button-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>									
+                <field name="ajax_validation" type="radio" default="0" label="Ajax Username and Email Verification" description="Instant Ajax Username and Email Verification during User registration." class="button-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="reload" type="radio" default="0" label="Reload Page After Login and Registration" description="Reload the full page when a user successfully logged in or completes registration." class="button-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="tos_fancybox" type="radio" default="1" label="Use Fancybox to Display Terms of Service" description="Use Fancybox to Display Terms of Service instead of default Bootstrap Modal" class="button-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>                                	
+                <field name="checkout_advertisement" type="radio" default="1" label="Show Checkout Advertisement" description="Show Checkout Advertisement if exists" class="button-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>	                														
+                <field name="registration_message" type="editor" default="" label="Registration Advantage Message" description="Registration advantage message displayed to guests. Keep it empty to show the default message." filter="safehtml" buttons="false" class="registration_message" />			
+            </fieldset>
+            <fieldset name="advanced" addfieldpath="/plugins/system/vponepagecheckout/fields">
+                <field name="load_jquery" type="radio" default="2" label="Load jQuery Library" description="Load jQuery library. Default is No because it is most likely to be already loaded by VirtueMart or by your Joomla Template." class="button-group">
+                    <option value="2">Auto</option>				
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="load_jquery_plugins" type="radio" default="2" label="Load jQuery Hover Intent and jQuery Easing Plugins" description="Load jQuery Hover Intent and jQuery Easing Plugins if it is not already loaded by your Joomla Template." class="button-group">
+					<option value="2">Auto</option>
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="load_boot_modal" type="radio" default="2" label="Load Bootstrap Modal Plugin" description="Load Bootstrap Modal Plugin if it is not already loaded by your Joomla Template." class="button-group">
+					<option value="2">Auto</option>
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="hide_system_msg" type="radio" default="1" label="Hide VirtueMart System Messages" description="Hide system messages like - Please accept the terms of service to confirm, Missing fields etc. They are disaplayed using Ajax." class="button-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>	
+                <field name="user_verification_fix" type="radio" default="1" label="Fix VM User Activation" description="Apply User Activation Fix for VirtueMart Registration." class="button-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="disable_ssl" type="radio" default="1" label="Disable SSL for Non Cart VM Pages" description="Disable SSL for all other VirtueMart Pages apart from Cart. SSL for Cart pages can be enabled in VirtueMart Configuration" class="button-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>				
+ 								<field name="default_country" type="country" label="Backup Default Country" description="The system set the Vendor country and state as defaults when the fields are empty. This helps to choose the shipping method. Maintain this field if the system fails to find vendor address correctly." />
+								<field name="custom_registration_fields" type="text" label="Custom Registration Fields" description="Enter Field Name or Field Names (seperated by comma which you want to disaply during registration." />
+                <field name="enable_recaptcha" type="radio" default="0" label="Show reCaptcha if enabled" description="Show reCaptcha if enabled in Joomla User Configuration." class="button-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>	
+                <field name="style_radio_checkbox" type="radio" default="1" label="Format Radio and Checkbox in Forms" description="When enabled the plugin will automatcally format the radio and checkbox selectors in the address forms with Javascript." class="button-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="remove_unnecessary_links" type="radio" default="0" label="Remove Extra Links" description="When enabled the plugin will automatcally remove the unnecessary/extra links from the checkout page." class="button-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="reload_payment_on_shipment_selection" type="radio" default="0" label="Reload Payment Methods on Shipment Selection" description="Enable this if you need to reload the payment methods after shipment selection" class="button-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="reload_all_on_apply_coupon" type="radio" default="0" label="Reload Payment &amp; Shipment Methods on Apply Coupon" description="Enable this if you need to reload the payment and shipments methods after a coupon code is submited" class="button-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>                                	                                								
+            </fieldset>
+        </fields>
+    </config>	
+</extension>
