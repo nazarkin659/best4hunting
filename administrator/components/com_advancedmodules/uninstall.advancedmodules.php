@@ -1,2 +1,0 @@
-<?php
-// no longer used

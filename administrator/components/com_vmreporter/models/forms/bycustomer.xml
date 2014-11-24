@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<form>
-	<fieldset>
-		<field name="jscss" type="jscss" /> 
-		<field name="column_filter" type="columnfilter" /> 
-		<field name="report_switch" type="reportswitch" /> 
-		<field name="plot_menu" type="plotmenu" /> 
-	</fieldset>
-</form>

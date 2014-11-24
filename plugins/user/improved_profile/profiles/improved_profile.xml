@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<form>
-	<fields name="improved">
-		<fieldset name="improved" label="Improved Profile">
-      
-    <field name="tos" id="ial-tos" type="tos" required="true" label="PLG_USER_PROFILE_OPTION_AGREE" description="PLG_USER_PROFILE_FIELD_TOS_DESC" article=""><option value="on">JYES</option></field></fieldset>
-	</fields>
-</form>
