@@ -15,7 +15,7 @@ $doc->addStyleSheet($this->baseurl. '/templates/' .$this->template. '/css/typogr
 $doc->addStyleSheet($this->baseurl. '/templates/' .$this->template. '/css/forms.css');
 $doc->addStyleSheet($this->baseurl. '/templates/' .$this->template. '/css/modules.css');
 $doc->addStyleSheet($this->baseurl. '/templates/' .$this->template. '/css/joomla.css');
-$doc->addStyleSheet($this->baseurl. '/templates/' .$this->template. '/css/layout.css');
+//$doc->addStyleSheet($this->baseurl. '/templates/' .$this->template. '/css/layout.css');
 $doc->addStyleSheet($this->baseurl. '/templates/' .$this->template. '/css/virtuemart.css');
 $doc->addStyleSheet($this->baseurl. '/templates/' .$this->template. '/css/custom.css');
 ?>
