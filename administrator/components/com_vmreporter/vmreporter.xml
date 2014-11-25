@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+    <name>com_vmreporter</name>
+    <creationDate>05 Nov 2013</creationDate>
+    <copyright>Copyright (C) 2013 VirtuePlanet Services LLP. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>VirtuePlanet Services LLP</author>
+    <authorEmail>info@virtueplanet.com</authorEmail>
+    <authorUrl>http://www.virtueplanet.com</authorUrl>
+    <version>1.3</version>
+    <description><![CDATA[
+		<link href="components/com_vmreporter/assets/css/vmreporter.css" rel="stylesheet" type="text/css" media="all" />
+		<div class="vm-reporter-description">
+			<div class="vm-reporter-inner">
+				<h1>VM Reporter</h1>
+				<h2>Sales Analysis and Reporting Tool for VirtueMart 2.0 eCommerce Component.</h2>
+				<p>VM Reporter is a component for VirtueMart 2.0 ecommerce platform which enables you to generate reports of the orders placed in your site against products, product categories, manufacturers, customers and countries. All generated reports are saved which you can view or download at any point of time as per your convenience. You can also plot graphs and charts with the generated reports for better analysis. </p>
+				<p>For more details please visit <a href="http://www.virtueplanet.com" title="www.virtueplanet.com">www.virtueplanet.com</a></p>
+				<em>Copyright © 2013 VirtuePlanet Services LLP. All Rights Reserved.</em>
+			</div>		
+		</div>		
+	]]></description>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>vmreporter.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+		
+    <administration>
+		
+        <menu img="components/com_vmreporter/assets/images/logo-small.png" >COM_VMREPORTER</menu>
+				
+        <submenu>            
+					<menu link="option=com_vmreporter&amp;view=byproducts" view="byproducts" img="components/com_vmreporter/assets/images/s_byproducts.png" alt="Vmreporter/Byproducts">COM_VMREPORTER_TITLE_BYPRODUCTS</menu>
+					<menu link="option=com_vmreporter&amp;view=bycategories" view="bycategories" img="components/com_vmreporter/assets/images/s_bycategories.png" alt="Vmreporter/Bycategories">COM_VMREPORTER_TITLE_BYCATEGORIES</menu>
+					<menu link="option=com_vmreporter&amp;view=bymanufacturers" view="bymanufacturers" img="components/com_vmreporter/assets/images/s_bymanufacturers.png" alt="Vmreporter/Bymanufacturers">COM_VMREPORTER_TITLE_BYMANUFACTURERS</menu>
+					<menu link="option=com_vmreporter&amp;view=bycustomers" view="bycustomers" img="components/com_vmreporter/assets/images/s_bycustomers.png" alt="Vmreporter/Bycustomers">COM_VMREPORTER_TITLE_BYCUSTOMERS</menu>
+					<menu link="option=com_vmreporter&amp;view=bycountries" view="bycountries" img="components/com_vmreporter/assets/images/s_bycountries.png" alt="Vmreporter/Bycountries">COM_VMREPORTER_TITLE_BYCOUNTRIES</menu>
+        </submenu>
+				
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>vmreporter.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+				
+        <languages folder="administrator">            
+					<language tag="en-GB">language/en-GB.com_vmreporter.ini</language>
+					<language tag="en-GB">language/en-GB.com_vmreporter.sys.ini</language>
+					<language tag="fr-FR">language/fr-FR.com_vmreporter.ini</language>
+					<language tag="fr-FR">language/fr-FR.com_vmreporter.sys.ini</language>
+					<language tag="de-DE">language/de-DE.com_vmreporter.ini</language>
+					<language tag="de-DE">language/de-DE.com_vmreporter.sys.ini</language>
+					<language tag="it-IT">language/it-IT.com_vmreporter.ini</language>
+					<language tag="it-IT">language/it-IT.com_vmreporter.sys.ini</language>
+					<language tag="es-ES">language/es-ES.com_vmreporter.ini</language>
+					<language tag="es-ES">language/es-ES.com_vmreporter.sys.ini</language>
+        </languages>
+				
+    </administration>
+</extension>

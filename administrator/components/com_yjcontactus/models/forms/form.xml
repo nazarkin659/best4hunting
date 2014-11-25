@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- $Id: yjms.xml $ -->
+<form>
+	<fieldset name="form"
+		addfieldpath="/administrator/components/com_yjcontactus/models/fields"
+	>
+
+<!--	<field name="id"  type="text" class="readonly" label="JGLOBAL_FIELD_ID_LABEL"
+			description ="JGLOBAL_FIELD_ID_DESC" size="10" default="0" 
+			readonly="true"  />-->
+		<field name="old_id" type="hidden" />
+
+		<field name="id" type="hidden" />
+		
+		<field name="item_id" type="hidden" />				
+		
+		<field name="name" type="text" class="inputbox"
+			size="40" label="COM_YJCONTACTUS_FORM_NAME"
+			description="COM_YJCONTACTUS_TIP_FORM_NAME" required="true"/>
+			
+<!--	<field name="video_desc" type="textarea" class="inputbox"
+			rows="3" cols="30" label="COM_YJMS_DESCRIPTION"
+			description="" />-->
+			
+		<field name="departments" type="formdepartments" default="0"
+			label="COM_YJCONTACTUS_ASSIGN_DEPART" description="COM_YJCONTACTUS_TIP_ASSIGN_DEPART" />
+			
+		<field name="menutype" type="formmenutype" default="0"
+			label="COM_YJCONTACTUS_ASSIGN_MENU" description="COM_YJCONTACTUS_TIP_ASSIGN_MENU" required="true"/>
+			
+		<field name="menu_name" type="text" class="inputbox"
+			size="40" label="COM_YJCONTACTUS_MENU_NAME"
+			description="COM_YJCONTACTUS_TIP_MENU_NAME" required="true"/>
+
+		<field name="captcha" type="radio"
+			label="COM_YJCONTACTUS_ACTIVATE_CAPTCHA" description="COM_YJCONTACTUS_TIP_ACTIVATE_CAPTCHA"
+			default="1" class="inputbox"
+		>
+			<option value="0">JNO
+			</option>
+			<option value="1">JYES
+			</option>
+		</field>
+		
+		<field name="published" type="radio"
+			label="COM_YJCONTACTUS_PUBLISHED" description=""
+			default="1" class="inputbox"
+		>
+			<option value="0">JNO
+			</option>
+			<option value="1">JYES
+			</option>
+		</field>		
+		<!--onclick="this.form.submit();"-->
+
+	</fieldset>
+</form>

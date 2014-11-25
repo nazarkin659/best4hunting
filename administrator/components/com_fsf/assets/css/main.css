@@ -1,0 +1,135 @@
+.fsf_main_item
+{
+    float: left;
+    text-align: center;
+    margin: 3px;
+    padding: 3px;
+    cursor: pointer;
+    border: 1px solid #DDD;
+}
+
+.fsf_main_icon
+{
+    float: none !important;
+}
+
+.fsf_main_icon img
+{
+    float: none !important;
+}
+
+fsf_main_text
+{
+    float: none;
+}
+
+.icon-48-fsf {
+	background-image: url(../images/fsf-48x48.png);
+}
+
+.icon-48-fsf_admin {
+	background-image: url(../images/admin-48x48.png);
+}
+.icon-48-fsf_announce {
+	background-image: url(../images/announce-48x48.png);
+}
+.icon-48-fsf_categories {
+	background-image: url(../images/categories-48x48.png);
+}
+.icon-48-fsf_cronlog {
+	background-image: url(../images/cronlog-48x48.png);
+}
+.icon-48-fsf_customfields {
+	background-image: url(../images/customfields-48x48.png);
+}
+.icon-48-fsf_customtext {
+	background-image: url(../images/customtext-48x48.png);
+}
+.icon-48-fsf_emailaccounts {
+	background-image: url(../images/emailaccounts-48x48.png);
+}
+.icon-48-fsf_emails {
+	background-image: url(../images/emails-48x48.png);
+}
+.icon-48-fsf_faqs {
+	background-image: url(../images/faqs-48x48.png);
+}
+.icon-48-fsf_glossary {
+	background-image: url(../images/glossary-48x48.png);
+}
+.icon-48-fsf_groups {
+	background-image: url(../images/groups-48x48.png);
+}
+.icon-48-fsf_kb {
+	background-image: url(../images/kb-48x48.png);
+}
+.icon-48-fsf_list {
+	background-image: url(../images/list-48x48.png);
+}
+.icon-48-fsf_menu {
+	background-image: url(../images/menu-48x48.png);
+}
+.icon-48-fsf_prods {
+	background-image: url(../images/prods-48x48.png);
+}
+.icon-48-fsf_settings {
+	background-image: url(../images/settings-48x48.png);
+}
+.icon-48-fsf_viewsettings {
+	background-image: url(../images/viewsettings-48x48.png);
+}
+.icon-48-fsf_templates {
+	background-image: url(../images/templates-48x48.png);
+}
+.icon-48-fsf_ticketdepts {
+	background-image: url(../images/ticketdepts-48x48.png);
+}
+.icon-48-fsf_ticketstatuss {
+	background-image: url(../images/ticketstatus-48x48.png);
+}
+.icon-48-fsf_ticketpris {
+	background-image: url(../images/ticketpris-48x48.png);
+}
+.icon-48-fsf_users {
+	background-image: url(../images/users-48x48.png);
+}
+.icon-48-fsf_moderate {
+	background-image: url(../images/moderate-48x48.png);
+}
+
+.icon-32-translate {
+    background-image: url(../images/translate-32x32.png);	
+}
+
+.icon-32-resetviews {
+    background-image: url(../images/resetviews-32.png);	
+}
+
+.icon-32-resetrating {
+    background-image: url(../images/resetrating-32.png);	
+}
+
+.icon-32-autosort {
+    background-image: url(../images/autosort-32.png);	
+}
+
+/* J3 specific stuff */
+table.table-striped input.text_area
+{
+    width: 40px;
+}
+td.order input.text_area
+{
+    float: right;
+}
+input, textarea
+{
+    width: auto !important;
+}
+
+
+.tcontent
+{
+	overflow: scroll;
+	height: 100%;
+}

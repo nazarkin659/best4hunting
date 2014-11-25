@@ -1,0 +1,10 @@
+.fsf_mod_faqs_cont
+{
+    clear: both;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 3px;
+}
+.fsf_mod_faqs_title
+{
+    cursor: pointer;
+}

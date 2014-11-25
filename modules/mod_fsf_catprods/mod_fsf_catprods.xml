@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+  <help url="HELP_MODULE" key="HELP_MODULE"></help>
+  <name>Freestyle FAQs: FAQ/KB category/product listing</name>
+	<author>Freestyle Joomla</author>
+	<creationDate>2014 01 08</creationDate>
+	<version>1.11.9.1786</version>
+	<description>Module to list your faq categories</description>
+	<files>
+		<filename>mod_fsf_catprods.xml</filename>
+		<filename module="mod_fsf_catprods">mod_fsf_catprods.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_fsf_catprods.ini</language>
+	</languages>
+	
+	<!-- For Joomla 1.6 + -->
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="listtype" type="radio" default="faqcat" label="List Type" description="Choose to list faq cats, kb cats or kb products">
+					<option value="faqcat">FAQ Categories</option>
+					<!--  -->
+				</field>
+			</fieldset>
+			
+			<!--  -->
+			
+			<fieldset name="general" label="General parameters">
+				<field name="show_images" type="radio" default="1" label="Show Images" description="Show images against category heading">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

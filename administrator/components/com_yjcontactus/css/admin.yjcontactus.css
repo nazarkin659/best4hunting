@@ -1,0 +1,55 @@
+table.adminheading th.sections_news {
+	background: url(../images/icons/news_item_manager.png) no-repeat left;
+	color: #AE7109;	
+}	
+table.adminheading th.edit_news {
+	background: url(../images/icons/section_manager.png) no-repeat left;
+	color: #AE7109;	
+}
+table.adminheading th.categories_news {
+	background: url(../images/icons/category_manager.png) no-repeat left;
+	color: #AE7109;	
+}
+table.adminheading th.language_manager {
+	background: url(../images/icons/language.png) no-repeat left;
+	color: #AE7109;	
+}
+table.adminheading th.back_language_manager {
+	background: none;
+	color: #AE7109;	
+}
+
+table.adminheading th.sections_layout {
+	background: url(../images/icons/layout.png) no-repeat left;
+	color: #AE7109;	
+}
+table.adminheading th.edit_zones {
+	background: url(../images/icons/settings.png) no-repeat left;
+	color: #AE7109;	
+}
+.adminheading th{
+    color:#669900;
+	height:60px;	
+}
+a{
+    color:#AE7109;
+}
+table.adminform th{
+    background: url(../images/adminform_back.jpg);
+}
+
+table.adminlist th{
+    background: url(../images/adminform_back.jpg);
+}
+
+table.adminForm th{
+    background: url(../images/adminform_back.jpg);
+}
+
+div.treeview{
+	float:right;
+}
+
+table.adminlist td.order {
+    width: 100px!important;
+}

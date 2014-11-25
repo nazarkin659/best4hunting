@@ -1,0 +1,163 @@
+/*---------------------------------------------------------------- 
+  Copyright:
+  (C) 2008 - 2012 IceTheme
+  
+  License:
+  GNU/GPL http://www.gnu.org/copyleft/gpl.html
+  
+  Author:
+  IceTheme - http://wwww.icetheme.com
+---------------------------------------------------------------- */
+
+#vm_module_cart {
+	width:200px;
+	position:relative;}
+
+	#vm_module_cart .lof_vm_top {
+		width:100%;
+		height:55px;
+		border-radius: 3px 3px 3px 3px;
+		background:#56A62F;
+		color:#fff;
+		border-radius:5px;
+		border:1px solid rgba(255,255,255,.35);
+		box-shadow:1px 1px 0 #56A62F, -1px -1px 0 #56A62F }
+
+
+	#vm_module_cart:after {
+		content:"";
+		background:url(images/cart_pin.png) no-repeat;
+		position:absolute;
+		width:58px;
+		height:44px;
+		top:-28px;
+		right:-44px;}
+		
+		
+		#vm_module_cart .lof_vm_top .lof_top_1{
+			padding-top:0px;
+			margin-bottom:1.75em}		
+		
+		#vm_module_cart .lof_vm_top .lof_top_1, 
+		#vm_module_cart .lof_vm_top .lof_top_2 {
+			clear:both;}
+
+
+			/* nr of products and total price */
+			#vm_module_cart .lof_vm_top .lof_top_1 span.vm_products{
+				float:left;
+				margin:2px 0 0 7px;}
+				
+			#vm_module_cart .lof_vm_top .lof_top_1 span.vm_sum{
+				float:right;
+				margin:2px 7px 0 0;}
+			
+			
+			/* view cart and show products  */	
+			#vm_module_cart .lof_vm_top .lof_top_2 a.vm_viewcart {
+				float:left;
+				margin:1px 0 0 7px;
+				text-decoration:none;		
+				border-bottom:1px dashed rgba(255,255,255,.5);
+				color:#fff;}
+			
+			#vm_module_cart .lof_vm_top .lof_top_2 .vm_readmore {
+				float:right;
+				margin:1px 7px 0 0;
+				text-decoration:none;
+				border-bottom:1px dashed rgba(255,255,255,.5);
+				color:#fff;}	
+				
+				#vm_module_cart .lof_vm_top .lof_top_2 a.vm_viewcart:hover,
+				#vm_module_cart .lof_vm_top .lof_top_2 a.vm_readmore:hover {
+					border-bottom-color:rgba(255,255,255,.9);}
+				
+	
+	
+	
+/* Cart dropdown */
+#vm_module_cart .lof_vm_bottom {
+	background:#56A62F;
+	color:#fff;
+	border-radius:5px;
+	border:1px solid rgba(255,255,255,.35);
+	box-shadow:1px 1px 0 #56A62F, -1px -1px 0 #56A62F;
+	left: 0;
+    padding-bottom: 5px;
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    z-index: 1000;}
+
+	#vm_module_cart .lof_vm_bottom .lof_item {
+		margin:5px 7px 7px;
+		padding:0 0 7px;
+		position:relative;
+		overflow:hidden;
+		border-bottom:1px dotted rgba(255,255,255,.3)}
+		
+		#vm_module_cart .lof_vm_bottom .lof_item img {
+			width:65px;
+			border:none;
+			padding:5px 0;
+			float:left;
+			margin:0}
+		
+		#vm_module_cart .lof_vm_bottom .lof_item a {
+			color:#fff;
+			font-size:1em;
+			margin-top:-2px;
+			display:block;}
+
+		#vm_module_cart .lof_vm_bottom .lof_item .lof_info{
+			width:112px;
+			text-align:left;
+			color:rgba(255,255,255,.70);
+			float: right;}
+			
+			#vm_module_cart .lof_vm_bottom .lof_item .lof_info span {
+				display:block;}
+			
+
+.lof_vm_bottom_btn {
+	position:relative;
+	overflow:hidden;
+	background:rgba(0,0,0,.25);
+	padding-bottom:2px;
+	margin:0 7px 2px;}
+	
+	.lof_vm_bottom_btn .vm_viewcart {
+		float:left;
+		color:#fff;
+		margin-left:7px;}
+		
+	.lof_vm_bottom_btn .lofclose {
+		float:right;
+		color:#fff;
+		margin-right:7px;}
+
+
+
+/* ajax loading */
+.lofloadding{
+	background-color: #000000;
+    height: 1250px;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 9990;}
+	
+	.lofloadding .loadddingicon{
+		background: url(images/ajax-loader.gif) no-repeat center transparent;
+		height: 100%;
+		width: 100%;}
+		
+	
+/* when cart is empty */
+p.vm_cart_empy {
+	font-size:1.1em;
+	text-align:center;
+	margin-top:15px;}

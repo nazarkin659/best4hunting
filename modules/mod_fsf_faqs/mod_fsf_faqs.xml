@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+  <help url="HELP_MODULE" key="HELP_MODULE"></help>
+  <name>Freestyle FAQs: FAQs</name>
+  <author>Freestyle Joomla</author>
+  <creationDate>2014 09 02</creationDate>
+  <version>1.11.17</version>
+  <description>List FAQs in a module</description>
+  <files>
+    <filename>mod_fsf_faqs.xml</filename>
+    <filename module="mod_fsf_faqs">mod_fsf_faqs.php</filename>
+    <filename>index.html</filename>
+    <folder>tmpl</folder>
+  </files>
+  <languages>
+    <language tag="en-GB">en-GB.mod_fsf_faqs.ini</language>
+  </languages>
+
+  <!-- Joomla 1.6+ -->
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="catid" type="sql" default="" label="Which FAQ Category" query="(SELECT 0 as id, 'All FAQs' as title) UNION (SELECT -5 as id, 'Featured FAQs' as title) UNION (SELECT id, title FROM #__fsf_faq_cat ORDER BY ordering)" key_field="id" value_field="title" />
+        <field name="dispcount" type="text" size="3" default="10" label="Max Number Of&lt;br/&gt;FAQs To Display" description="How many faqs should be displayed" />
+        <field name="maxheight" type="text" size="5" default="0" label="Maximum Height" description="Maximum height of display. If larger than this, the display will scroll. Use 0 for auto height." />
+        <field name="listtype" type="list" default="newpage" label="Answer Display" description="How should the FAQ answers be displayed">
+          <option value="newpage">New Page</option>
+          <option value="popup">Popup Window</option>
+          <option value="accordion">Accordion</option>
+        </field>
+
+      </fieldset>
+
+      <fieldset name="advanced">
+        <field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+      </fieldset>
+    </fields>
+  </config>
+</extension>
