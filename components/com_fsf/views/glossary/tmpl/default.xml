@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="GLOSSARY_LIST_ALL_ARTICLES">
+	  <help url = "http://www.freestyle-joomla.com/comhelp/fsf/frontend-view-glossary-default" />
+	  <message></message>
+  </layout>
+  <state>
+    <name>GLOSSARY_LIST_ALL_ARTICLES</name>
+    <params>
+      <param name="use_letter_bar" type="list" default="-1" label="GLOSSARY_USE_LETTER_BAR" description="VIEW_HELP_GLOSSARY_USE_LETTER_BAR">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="0">GLOSSARY_USE_LETTER_BAR_0</option>
+        <option value="1">GLOSSARY_USE_LETTER_BAR_1</option>
+        <option value="2">GLOSSARY_USE_LETTER_BAR_2</option>
+      </param>
+    </params>
+
+    <fields name="params">
+      <fieldset name="main"	label="GLOSSARY_VIEW_SETTINGS">
+        <field name="use_letter_bar" type="list" default="-1" label="GLOSSARY_USE_LETTER_BAR" description="VIEW_HELP_GLOSSARY_USE_LETTER_BAR">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">GLOSSARY_USE_LETTER_BAR_0</option>
+          <option value="1">GLOSSARY_USE_LETTER_BAR_1</option>
+          <option value="2">GLOSSARY_USE_LETTER_BAR_2</option>
+        </field>
+
+      </fieldset>
+    </fields>
+  </state>
+</metadata>

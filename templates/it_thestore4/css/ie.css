@@ -1,0 +1,128 @@
+/*---------------------------------------------------------------- 
+  Copyright:
+  Copyright (C) 2008 - 2011 IceTheme. All Rights Reserved
+  
+  License:
+  Copyrighted Commercial Software 
+  
+  Author:
+  IceTheme - http://wwww.icetheme.com
+---------------------------------------------------------------- */
+
+
+/* ---------------------- ie.css --------------------------
+This CSS file contain the fixes for the Internet Explorer 7 and
+Internet Explorer 8. The properties with "*" before them are
+only for Internet Exploper 7. The other may apply to both 
+browser versions.
+
+- For IE6 we have droppped support.
+- For IE9 there is no need for hacks as this browser version
+is improved very well comparing to IE7/IE8  
+---------------------------------------------------------------- */
+
+/* icemegamenu.css */
+div.icemegamenu ul#icemegamenu li span.icemega_desc {
+	display:none}
+	
+div.icemegamenu ul#icemegamenu li:hover span.icemega_desc,
+div.icemegamenu ul#icemegamenu li.current span.icemega_desc,
+div.icemegamenu ul#icemegamenu li:hover span.icemega_desc:after,
+div.icemegamenu ul#icemegamenu li.current span.icemega_desc:after,
+div.icemegamenu ul#icemegamenu li.active  span.icemega_desc,
+div.icemegamenu ul#icemegamenu li.active  span.icemega_desc:after,
+div.icemegamenu ul#icemegamenu li li span.icemega_desc,
+div#subMenusContainer span.icemega_desc { 
+	display:block}	
+
+
+#icemegamenu .icesubMenu .icemega_cover_module .icemega_modulewrap,
+#subMenusContainer .icesubMenu .icemega_cover_module .icemega_modulewrap { 
+	*color:#fff;}					
+
+	
+	
+	
+/* forms.css 
+-------------*/
+button,
+input.button,
+a.button,
+a.vm-button-correct,
+input[type="submit"] {
+	float:left}
+
+
+/* modules.css */
+.col-module {
+	 *zoom:1}					
+		
+		
+				
+/* layout.css */
+#language ul li.lang-active a {
+	padding:0 3px}
+	
+.cols-2 .column-1,
+.cols-2 .column-2 {
+	*width:46%}
+
+	
+
+/* typography.css */
+hr { *background:none; *color:#ccc; *height:1px!important; *margin-bottom:25px}
+
+
+	
+/* joomla.css */	
+	
+form#login-form p#form-login-remember label {
+	*width:95px}		
+
+.search .button {
+	position:absolute;
+	*float:none;
+	*text-indent:-9999em;
+	*top:13px;
+	*width:45px;
+	right:2px;
+	*left:auto;}
+	
+		
+		
+/* icetabs */
+
+
+	
+/* icecarousel */
+.ice-carousel .ice-row span.mod-ice-carousel-hits {
+	*margin-top:0px;} 
+
+
+/* iceslideshow */
+.ice-slideshow-default .ice-main-wapper .ice-main-item .ice-description {
+	background:url(../images/ie_fix.png) repeat}
+	
+	
+
+/* color fixes for transparency in IE6 */
+.col-module-suffix-style3 {
+	color:#fff;}
+	
+	
+/* external extensions */
+
+/* virtuemart */
+span.quantity-controls input.quantity-plus {
+	*margin-top:-4px;}
+span.quantity-controls input.quantity-minus {
+	*margin-top:-24px;}
+	
+
+input.addtocart-button,
+.carousel_content .addtocart-area input.addtocart-button  {
+	*height:27px;
+	*width:130px!important}	
+
+.iceaccordion div.accordion_content .padding .addtocart-bar {
+	*width:auto}	

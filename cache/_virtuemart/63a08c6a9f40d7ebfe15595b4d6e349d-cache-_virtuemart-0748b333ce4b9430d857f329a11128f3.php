@@ -1,0 +1,1 @@
+<?php die("Access Denied"); ?>#x#O:8:"stdClass":2:{s:5:"route";s:60:"aksessuary-dlya-strelby-i-okhoty/tovary-dlya-tochnoj-strelby";s:6:"itemId";s:3:"219";}

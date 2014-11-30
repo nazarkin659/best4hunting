@@ -1,0 +1,151 @@
+/*---------------------------------------------------------------- 
+  Copyright:
+  Copyright (C) 2008 -2011 IceTheme. All Rights Reserved
+  
+  License:
+  Copyrighted Commercial Software 
+  
+  Author:
+  IceTheme - http://wwww.icetheme.com
+---------------------------------------------------------------- */
+
+
+
+/* IceVmCart */
+
+	#vm_module_cart .lof_vm_top {
+		background:#879631;
+		box-shadow:1px 1px 0 #879631, -1px -1px 0 #879631 }
+		
+	
+		/* Cart dropdown */
+		#vm_module_cart .lof_vm_bottom {
+			background:#879631;
+			box-shadow:1px 1px 0 #879631, -1px -1px 0 #879631;}
+			
+/* joomla.css */	
+
+   	#search .button {
+		border-color:#295482;
+		background-color:#295482;
+		background-image: linear-gradient(bottom, rgb(41,84,130) 10%, rgb(61,105,147) 70%);
+		background-image: -o-linear-gradient(bottom, rgb(41,84,130) 10%, rgb(61,105,147) 70%);
+		background-image: -moz-linear-gradient(bottom, rgb(41,84,130) 10%, rgb(61,105,147) 70%);
+		background-image: -webkit-linear-gradient(bottom, rgb(41,84,130) 10%, rgb(61,105,147) 70%);
+		background-image: -ms-linear-gradient(bottom, rgb(41,84,130) 10%, rgb(61,105,147) 70%);}
+
+	#mainmenu .icemegamenu {
+		background-color:#295482;
+		background-image: linear-gradient(bottom, rgb(41,84,130) 10%, rgb(61,105,147) 70%);
+		background-image: -o-linear-gradient(bottom, rgb(41,84,130) 10%, rgb(61,105,147) 70%);
+		background-image: -moz-linear-gradient(bottom, rgb(41,84,130) 10%, rgb(61,105,147) 70%);
+		background-image: -webkit-linear-gradient(bottom, rgb(41,84,130) 10%, rgb(61,105,147) 70%);
+		background-image: -ms-linear-gradient(bottom, rgb(41,84,130) 10%, rgb(61,105,147) 70%);}
+		
+/* IceMegaMenu css */
+	
+	div.icemegamenu ul#icemegamenu li { 
+		background-image:url(../images/styles/style1/border.png);}
+		
+				
+			div.icemegamenu ul#icemegamenu li span.icemega_desc {
+				background-color:#879631;
+				background-image: -moz-linear-gradient(#A9BC3D, #879631);
+				background-image: -webkit-linear-gradient(#A9BC3D, #879631); 
+				background-image: -o-linear-gradient(#A9BC3D, #879631);
+				background-image: linear-gradient(#A9BC3D, #879631);}
+				
+
+				div.icemegamenu ul#icemegamenu li span.icemega_desc:after{
+					  border-top-color: #879631;}
+		
+	#icemegamenu ul.icesubMenu,
+	#subMenusContainer ul.icesubMenu {  
+		background-color:#295482;}
+		
+/*IceSlideshow*/	
+
+.ice-slideshow-default .ice-proccessbar {
+    background-image: url(../images/styles/style1/timeline.png);}
+
+/*IceCarousel*/	
+.ice-carousel .ice-navigator-outer ul.ice-navigator li span {
+    background-image: url(../images/styles/style1/dot.png);}
+
+
+/* modules.css */	
+
+	#promo .moduletable h3.mod-title{
+		color:#77842B;}
+	
+	    /* with no suffix */
+		.col-module .col-module-header {
+			background:#879631;}
+		
+		.col-module .col-module-header:after {
+			border-top-color: #879631;}			
+		
+		.col-module .col-module-header:before {
+			background-image: linear-gradient(bottom, rgb(255,255,255) 36%, rgb(225,229,203) 100%, rgb(225,229,203) 100%);
+			background-image: -o-linear-gradient(bottom, rgb(255,255,255) 36%, rgb(225,229,203) 100%, rgb(225,229,203) 100%);
+			background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 36%, rgb(225,229,203) 100%, rgb(225,229,203) 100%);
+			background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 36%, rgb(225,229,203) 100%, rgb(225,229,203) 100%);
+			background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 36%, rgb(225,229,203) 100%, rgb(225,229,203) 100%);}	
+			
+				/* subtitles */
+				.col-module-header  h3.mod-title span {
+					color:#DBE026;} 
+	
+	/* with suffix "style1*/			  
+		.col-module .col-module-suffix-style1 .col-module-header {	
+			background:#295482;}
+			
+			.col-module .col-module-suffix-style1 .col-module-header:after {
+				border-top-color: #295482;}		
+				
+			.col-module .col-module-suffix-style1 .col-module-header:before {
+				background-image: linear-gradient(bottom, rgb(255,255,255) 36%, rgb(201,212,224) 100%, rgb(201,212,224) 100%);
+				background-image: -o-linear-gradient(bottom, rgb(255,255,255) 36%, rgb(201,212,224) 100%, rgb(201,212,224) 100%);
+				background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 36%, rgb(201,212,224) 100%, rgb(201,212,224) 100%);
+				background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 36%, rgb(201,212,224) 100%, rgb(201,212,224) 100%);
+				background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 36%, rgb(201,212,224) 100%, rgb(201,212,224) 100%);}	
+				
+			.col-module .col-module-suffix-style1 .col-module-header  h3.mod-title span {
+				color: #A9C8E4;} 		
+
+			
+			
+		/* with suffix "style2 */	
+		.col-module-suffix-style2 .col-module-header h3 span {
+					color:#777}	
+				
+		/* with suffix  style 3 */
+			.col-module-suffix-style3 {
+				background:#879631;
+				border-color:#A3AF54;}
+			
+					.col-module .col-module-suffix-style3 .col-module-header h3.mod-title span {
+						color: #DBE026;}				
+					
+#footer .moduletable h3.mod-title {
+	color: #77842B;}
+			
+/* forms.css */	
+
+		span.addtocart-button .addtocart-button {
+			background-color:#879631;
+			border-color:#879631;}
+		
+		span.addtocart-button .addtocart-button:hover {
+			background-color:#879631!important;}
+			
+			
+/* Buttons 
+------------ */
+button,
+input.button,
+a.button,
+a.vm-button-correct,
+input[type="submit"]{
+	background:#2F6195;
+	border-color:#2F6195;}

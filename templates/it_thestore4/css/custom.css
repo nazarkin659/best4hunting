@@ -1,0 +1,230 @@
+.new_products li{
+    padding-top: 0;
+}
+
+.vmorder-done-payinfo{
+    float: left;
+    padding-right: 10px;
+    width: 100px;}
+    
+.zoomPad>img
+{
+  width:100%;
+  max-height: 600px;
+  max-weight: 600px;
+}
+
+#virtuemart-mods .moduletable:first-child .moduletable-header h3{
+  color: #ac211e !important;
+
+}
+
+/*slider's header*/
+#virtuemart-mods .moduletable .moduletable-header{
+  position: inherit !important;
+}
+
+/*main menu*/
+
+#mainmenu .icemegamenu{
+background-image: url('../../../images/nav.png') !important;
+
+
+}
+
+.col-module .col-module-header{
+  
+background-color: #586737;
+background-image: -moz-linear-gradient(top, #59751b, #586737 60%, #586737);
+background-image: -webkit-linear-gradient(top, #59751b, #586737 60%, #586737);
+background-image: -o-linear-gradient(top, #59751b, #586737 60%, #586737);
+position: relative;
+border-bottom: 1px solid #fff;
+box-shadow: 0 5px 5px #ccc;
+margin-bottom: 8px;
+}
+
+#content{
+  background-image: url('../../../images/bg.png');
+  background-repeat: repeat;
+  padding-top:9px;
+}
+
+#header:before{
+  background:none;
+}
+
+.col-module-header{
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+#left-column .inside,.moduletable,.inside,#Kunena{
+  background-color: #fff;
+}
+
+.item-page{
+  padding: 3px 16px 10px 20px;
+  border-radius: 5px;
+}
+
+.new_products .heading-title{
+  padding-left: 9px;
+  color: #ac211e;
+  font-size: 1.4em;
+}
+
+/*fix border-radius for last element*/
+.col-module-suffix-style2{
+  border-radius: 10px 10px 5px 5px;
+}
+
+.moduletable,.new_products{
+  border-radius:5px;
+}
+.moduletable-header{
+  border-radius: 5px 5px 0 0;
+}
+
+#middle-column .inside{
+  padding: 0 5px 0 10px !important;
+}
+
+#topmenu {
+  position: absolute;
+  right: 260px;
+  top: 45px;
+}
+
+#topmenu li a{
+  padding: 4px 10px 5px !important;
+  color: red;
+  border-radius: 5px;
+  color: #fff!important;
+  box-shadow: none;
+  padding: 4px 10px 5px;
+  border: 1px solid #295482;
+  background-color: #295482;
+  background-image: linear-gradient(bottom, rgb(41,84,130) 10%, rgb(61,105,147) 70%);
+  background-image: -o-linear-gradient(bottom, rgb(41,84,130) 10%, rgb(61,105,147) 70%);
+  background-image: -moz-linear-gradient(bottom, rgb(41,84,130) 10%, rgb(61,105,147) 70%);
+  background-image: -webkit-linear-gradient(bottom, rgb(41,84,130) 10%, rgb(61,105,147) 70%);
+  background-image: -ms-linear-gradient(bottom, rgb(41,84,130) 10%, rgb(61,105,147) 70%);
+  }
+  
+#search {
+float: right;
+position: relative;
+margin-top: 20px;
+margin-right: 80px;
+}
+
+.vmshipment_name,.vmshipment_usps,.vmpayment_name{
+  font-weight: bold;
+}
+
+
+/* Categories lineheight */
+.lofmenu_virtuemart .lofmenu a
+{
+  padding: 4px; !important;
+}
+
+.main-image .zoomPad{
+  cursor: auto !important;
+}
+/* Sbuscribe */
+.subscribe-button-inner{
+  position: absolute;
+  top: 7px;
+  left: 270px;
+}
+
+
+
+
+/* Contact form  */
+#formcontainer{
+  padding-top: 10px;
+  font-family: "Tahoma", Verdana !important;
+}
+
+#contactForm label{
+  font-size: 13px;
+}
+
+#contactForm input, #contactForm select, #contactForm textarea, #contactForm input#archive{
+  font-size: 12px !important;
+  font-family: "Tahoma" !important;
+}
+
+#fomrbg{
+  background: none !important;
+}
+
+#contactForm table td{
+  border-top: 1px solid #efeeee;
+}
+
+#virtuemart-mods .mod-title{
+  color : #ac211e !important;
+}
+
+#medium-image{
+  width: 100%;
+  height: 100%;
+}
+
+#content_main{
+  background-image: url('/templates/it_thestore4/background-fix.png');
+  background-position: center  bottom;
+  background-repeat: repeat-y;
+  background-size: 103%;
+}
+
+#vm_module_cart:after{
+  background: none !important;
+}
+
+.customsubscribe{
+  padding: 0
+}
+
+
+.main-image img{
+  width:100%;
+  max-height: 600px;
+  max-weight: 600px;
+}
+
+/* One page check out */
+.proopc-payments label{
+  float: none;
+  margin-bottom: 5px;
+}
+#ProOPC input[type="text"]{
+  font-size: 12px;
+}
+
+#mod_virtuemart_search{
+	margin-right : 57px;
+}
+
+.AuthorizeNetSeal{
+	margin-left:52px !important;
+}
+
+
+.productdetails-view .product_sku{
+	float:right;
+}
+
+#mod_improved_ajax_login-216{
+	position: absolute;
+	top: 5px;
+	right: 0;
+}
+
+#vm_module_cart .lof_vm_top,.col-module .col-module-header{
+	background-image: -webkit-linear-gradient(bottom, rgb(41,84,130) 10%, rgb(61,105,147) 70%) !important;
+}

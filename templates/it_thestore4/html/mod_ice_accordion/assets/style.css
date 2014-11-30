@@ -1,0 +1,220 @@
+/*---------------------------------------------------------------- 
+  Copyright:
+  (C) 2008 - 2010 IceTheme
+  
+  License:
+  GNU/GPL http://www.gnu.org/copyleft/gpl.html
+  
+  Author:
+  IceTheme - http://wwww.icetheme.com
+---------------------------------------------------------------- */
+
+.iceaccordion { 
+	clear:both;
+	margin:0;} 
+
+	.iceaccordion h4.toggler {
+		border-bottom:1px solid #eee;
+		padding:6px 0;
+		margin:0;
+		text-align:left;
+		font-size:1.2em;
+		font-family:Arial, Helvetica, sans-serif;
+		cursor: pointer;
+		position:relative;
+		cursor: pointer;
+		background: url(images/iceaccordion_arrow_closed.png) no-repeat center right}
+	
+		.iceaccordion h4.open {
+			background-image:url(images/iceaccordion_arrow_open.png)}
+	
+		.iceaccordion h4.toggler span {
+			display:block;
+			width:88%;}
+			
+			.iceaccordion h4.toggler span:hover span {
+				background:rgba(255,255,255,.3);
+				display:block;
+				margin-left:-5px;
+				padding-left:5px}
+			
+	.iceaccordion div.accordion_content{
+		position: relative;
+		overflow: hidden;}
+		
+		.iceaccordion div.accordion_content .padding {
+			margin:.75em 0 1em;}
+			
+		.iceaccordion div.accordion_content p.iteminfo {
+			font-size:.9em; 
+			color:#999;
+			margin-bottom:.5em;}
+			
+			.iceaccordion div.accordion_content p.iteminfo span {
+				padding-right:10px}
+					
+		
+		
+		.iceaccordion div.accordion_content .accordion_mainimage {
+			position:relative;
+			overflow:hidden;}
+		
+		.iceaccordion div.accordion_content img {} 
+			
+			
+			.iceaccordion div.accordion_content .accordion_mainimage span.mod-ice-accordion-hits {
+				position:absolute;
+				bottom:12px;
+				right:3px;
+				background:#eee;
+				padding:2px 10px;
+				opacity:0;
+				-webkit-transition:all .5s ease-out;
+				-moz-transition:all .5s ease-out;
+				-o-transition:all .5s ease-out; 
+				transition:all .5s ease-out;}
+				.iceaccordion div.accordion_content:hover .accordion_mainimage span.mod-ice-accordion-hits {
+					opacity:1}	
+			
+			
+			.iceaccordion div.accordion_content p.readmore {
+				margin-bottom:1.75em;
+				margin-top:10px;}
+				.iceaccordion div.accordion_content p.readmore a {
+					margin-left:0}
+				
+			
+/* Pagination */	
+.iceaccordion-paging {
+	clear:both;
+	background:#fff!important;
+    padding: 6px 0;
+	margin-top:10px;
+    position: relative;
+    text-align: center;
+    width: 100%;}
+	
+	.iceaccordion-paging .iceaccordion-prev,
+	.iceaccordion-paging .iceaccordion-next{
+		position: absolute;
+		cursor: pointer;
+		width: 29px;
+		height: 22px;
+		left: 0;
+		opacity:1;
+		top: 7px;
+		background:url(images/iceaccordion_arrows.png) repeat 0 -22px}
+		.iceaccordion-paging .iceaccordion-prev span,
+		.iceaccordion-paging .iceaccordion-next span { display:none}
+
+	.iceaccordion-paging .iceaccordion-next{
+		left:auto;
+		right: 0;
+		background-position:0 0}
+		
+				
+		.iceaccordion-paging .iceaccordion-prev:hover {
+			background-position:0 -66px;}
+		
+		.iceaccordion-paging .iceaccordion-next:hover {
+			background-position:0 -44px;}
+		
+		
+		.iceaccordion-paging .disabled {
+		opacity:.3;
+		cursor:default;}
+		.iceaccordion-paging .disabled:hover {
+			opacity:.3;
+			background-position:inherit}
+			
+	
+
+ul.iceaccordion-numbers {
+    margin: 0px !important;
+    overflow: hidden;
+    padding: 1px 25px 0;
+    text-align: center;}
+		
+	ul.iceaccordion-numbers li {
+		cursor: pointer;
+		display: inline;
+		font-size:1em;
+		list-style: none outside none;
+		border:1px solid #eee;
+		padding:3px 9px 2px;
+		margin:0 2px;
+		background:#fff;
+		color:#888;}
+		
+		ul.iceaccordion-numbers li:hover {
+			color: #111;}
+			
+		ul.iceaccordion-numbers li.active {
+			color: #111;
+			font-weight:normal;
+			cursor: default;}
+
+	
+
+.iceaccordion-loading {
+    left:0;
+	margin-left:0;
+	position: absolute;
+	top:0;
+	width: 100%;
+	height:28px;
+	z-index: 999;
+	padding:8px 0;
+	display:none;
+	box-shadow:none;
+	background-color:#fff;
+	background-color:rgba(255,255,255,.8);
+	border:none;
+	background-image:url(images/loading.gif);
+	background-repeat:no-repeat;
+	background-position: 50% 50%;}
+	
+	
+
+
+/* Virtuemart Styles */
+.iceaccordion div.accordion_content .padding .vm_price{
+	text-align:center;
+	padding-bottom:5px;
+	border-bottom:none;
+	color:#999;
+	margin-bottom: 0.75em;}
+
+	.iceaccordion div.accordion_content .padding .vm_price span{
+		clear:both;
+		color: #950000;
+		display:block;
+		line-height: 1.4em;
+		font-size: 1.5em;}	
+
+.iceaccordion div.accordion_content .padding .vm_current_stock {
+	margin-bottom: 0.75em;	}
+
+.iceaccordion div.accordion_content .padding span.vote {
+	clear: both;
+	color: #888;
+	margin-bottom:10px;
+	display: block;
+	float: left;
+	text-align: center;}
+
+.iceaccordion div.accordion_content .padding  .addtocart-bar {
+	margin: 0 auto;
+	padding: 0;
+	width: 195px;}
+	
+	.iceaccordion div.accordion_content .padding span.addtocart-button {
+		width:auto;}
+		
+	.iceaccordion div.accordion_content .padding .addtocart-area {
+		padding-top:10px;
+		margin-top: 1em;
+		margin-bottom:25px;
+		border-top: 1px dotted #ddd;
+		float: left;
+		width:100%!important;}	

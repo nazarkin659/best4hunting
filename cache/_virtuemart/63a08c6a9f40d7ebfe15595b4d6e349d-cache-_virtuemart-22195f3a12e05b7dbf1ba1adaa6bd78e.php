@@ -1,0 +1,1 @@
+<?php die("Access Denied"); ?>#x#O:8:"stdClass":2:{s:5:"route";s:71:"odezhda-dlya-okhoty/banded-odezhda-dlya-okhoty-na-vodoplavushchuyu-dich";s:6:"itemId";s:3:"219";}

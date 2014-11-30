@@ -1,0 +1,171 @@
+/*------------------------------------------------------------------------------------------------------------
+# VP One Page Checkout! Joomla 2.5 Plugin for VirtueMart 2.0 / VirtueMart 2.6
+# ------------------------------------------------------------------------------------------------------------
+# Copyright (C) 2012 - 2014 VirtuePlanet Services LLP. All Rights Reserved.
+# License - GNU General Public License version 2. http://www.gnu.org/licenses/gpl-2.0.html
+# Author: VirtuePlanet Services LLP
+# Email: info@virtueplanet.com
+# Websites:  http://www.virtueplanet.com
+------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 979px) and (min-width: 768px) {
+    .col-name {
+        width: 30%;
+    }
+    .proopc-finalpage .proopc-column3, .proopc-register, .proopc-login  {
+        float: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .proopc-register-login .proopc-inner, .proopc-register-login h3, #ProOPC .proopc-register-login h3, #ProOPC .proopc-login h3 {
+        margin: 0;
+    }
+    .proopc-login {
+        margin-top: 20px;
+    }
+    .proopc-column3 .proopc-bt-address, .proopc-column3 .proopc-st-address, .proopc-shipments, .proopc-payments, .proopc-coupon, .proopc-cartlist, .proopc-confirm-order, .proopc-column3 .proopc-coupon.no-top-margin, .proopc-column3 .proopc-confirm-order.no-top-margin {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 15px;
+    }
+    .proopc-column3 .proopc-bt-address {
+        margin-top: 0;
+    }
+}
+@media (max-width: 767px) {
+    .proopc-table-striped {
+        border: 0 none;
+    }
+    .col-name {
+        width: auto;
+    }
+    .cart-images {
+        float: none;
+    }
+    .cart-product-description {
+        float: none;
+        width: 98%;
+    }
+    .cart-product-description > div {
+        padding-left: 0;
+        margin-top: 10px;
+    }
+    .proopc-finalpage .proopc-column3, .proopc-register, .proopc-login  {
+        float: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .proopc-register-login .proopc-inner, .proopc-register-login h3, #ProOPC .proopc-register-login h3, #ProOPC .proopc-login h3 {
+        margin: 0;
+    }
+    .proopc-login {
+        margin-top: 20px;
+    }
+    .proopc-column3 .proopc-bt-address, .proopc-column3 .proopc-st-address, .proopc-shipments, .proopc-payments, .proopc-coupon, .proopc-cartlist, .proopc-confirm-order, .proopc-column3 .proopc-coupon.no-top-margin, .proopc-column3 .proopc-confirm-order.no-top-margin {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 15px;
+    }
+    .proopc-column3 .proopc-bt-address {
+        margin-top: 0;
+    }
+    /* Force table to not be like tables anymore */
+    table.cart-summary.proopc-table-striped, .cart-summary.proopc-table-striped thead, .cart-summary.proopc-table-striped tbody, .cart-summary.proopc-table-striped th, .cart-summary.proopc-table-striped td, .cart-summary.proopc-table-striped tr {
+        display: block;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .cart-summary.proopc-table-striped thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+		#ProOPC table.cart-summary tr {
+			display: block;
+		}		
+    .cart-summary.proopc-table-striped tr {
+        border: 1px solid #ccc;
+    }
+    .dark .cart-summary.proopc-table-striped tr {
+        border: 1px solid #111;
+    }
+    .cart-summary.proopc-table-striped .blank-row {
+        border: 0 none;
+        background: 0 none;
+    }
+    .cart-summary.proopc-table-striped .blank-row td {
+        border: 0 none;
+        padding: 0;
+        background: 0 none;
+    }
+    .cart-summary.proopc-table-striped td, .cart-summary.proopc-table-striped .grand-total td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px dotted #eee;
+        position: relative;
+        padding-left: 50%;
+        min-height: 20px;
+        text-align: left;
+    }
+    .dark .cart-summary.proopc-table-striped td, .dark .cart-summary.proopc-table-striped .grand-total td {
+        border-bottom: 1px dotted #111;
+    }
+    .cart-summary.proopc-table-striped td.sub-headings, .cart-summary.proopc-table-striped td.coupon-form-col, .cart-summary.proopc-table-striped td.shipping-payment-heading {
+        /* Behave  like a "row" */
+        padding-left: 6px;
+        text-transform: uppercase;
+        color: #333;
+    }
+    .dark .cart-summary.proopc-table-striped td.sub-headings, .dark .cart-summary.proopc-table-striped td.coupon-form-col, .dark .cart-summary.proopc-table-striped td.shipping-payment-heading {
+        color: #D5D3C8;
+    }
+    .cart-summary.proopc-table-striped td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+    .cart-summary.proopc-table-striped td.sub-headings:before, .cart-summary.proopc-table-striped td.coupon-form-col:before {
+        display: none;
+    }
+    .input-append input.input-ultra-mini {
+        width: 30px;
+    }
+    .cart-summary.proopc-table-striped .col-name [class*="span"] {
+        display: block;
+        float: none
+    }
+    .cart-coupon-row .col-tax {
+        min-height: 20px;
+    }
+    .cart-summary .grand-total td, .cart-summary .grand-total-p-currency td {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px dotted #ddd;
+    }
+    .continue-cont, .checkout-cont {
+        text-align: center;
+    }
+    .continue-cont {
+        margin-bottom: 15px;
+    }
+
+}
+@media (min-width: 767px) {
+    .proopc-table-striped .col-name {
+        text-align: left;
+    }
+    .proopc-table-striped .col-price, .proopc-table-striped .col-sku, .proopc-table-striped .col-qty {
+        text-align: center;
+    }
+    .proopc-table-striped .col-tax, .proopc-table-striped .col-discount, .proopc-table-striped .col-total {
+        text-align: right;
+    }
+    .proopc-table-striped .sub-headings {
+        text-align: right;
+    }
+}

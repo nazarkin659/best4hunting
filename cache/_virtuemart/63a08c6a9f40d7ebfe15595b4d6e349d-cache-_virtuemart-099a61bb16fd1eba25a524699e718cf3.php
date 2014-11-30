@@ -1,0 +1,1 @@
+<?php die("Access Denied"); ?>#x#O:8:"stdClass":2:{s:5:"route";s:53:"optika-dlya-okhoty/opticheskie-pritsely-leupold/vx-3l";s:6:"itemId";s:3:"219";}

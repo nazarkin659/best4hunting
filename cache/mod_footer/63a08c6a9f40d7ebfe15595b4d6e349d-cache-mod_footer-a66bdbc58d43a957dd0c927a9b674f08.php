@@ -1,0 +1,3 @@
+<?php die("Access Denied"); ?>#x#a:2:{s:6:"output";a:2:{s:4:"body";s:0:"";s:4:"head";a:0:{}}s:6:"result";s:372:"<div class="footer1">&#169; 2014 best4hunting.com. Все права защищены.</div>
+<div class="footer2"><a href="http://www.joomla.org">Joomla!</a> - бесплатное программное обеспечение, распространяемое по лицензии <a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License.</a></div>
+";}

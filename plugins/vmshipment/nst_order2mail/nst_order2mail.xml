@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<install type="plugin" version="2.5" method="upgrade"  group="vmshipment">
+  <name>NST_Order2Mail</name>
+  <author>Nasieti.com</author>
+  <creationDate>A 2013</creationDate>
+  <copyright>Copyright (c) 2013 Nasieti.com. All rights reserved.</copyright>
+  <authorEmail>nasieti@nasieti.com</authorEmail>
+  <authorUrl>nasieti.com</authorUrl>
+  <version>1.4.1</version>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <description>VMSHIPMENT_ORDER2MAIL_PLUGINDESC</description>
+    <files>
+        <filename plugin="nst_order2mail">nst_order2mail.php</filename>
+	<filename>index.html</filename>
+        <folder>nst_order2mail</folder>
+	<folder>language</folder>
+        </files>
+    <languages>
+	<language tag="en-GB">language/en-GB/en-GB.plg_vmshipment_nst_order2mail.ini</language>
+    </languages>
+        <config>
+                <fields name="params">
+                        <fieldset name="basic" addfieldpath="/plugins/vmshipment/nst_order2mail/nst_order2mail/elements">
+                                <field name="backendjquery" type="jquery"
+                                        default="2"
+					description="VMSHIPMENT_ORDER2MAIL_JQUERY_DESC"
+					label="VMSHIPMENT_ORDER2MAIL_JQUERY"
+					/>
+                                <field name="from" type="text"
+                                        default=""
+					description="VMSHIPMENT_ORDER2MAIL_FROM_DESC"
+					label="VMSHIPMENT_ORDER2MAIL_FROM"
+                                />
+                                <field name="namefrom" type="text"
+                                        default=""
+					description="VMSHIPMENT_ORDER2MAIL_FROMNAME_DESC"
+					label="VMSHIPMENT_ORDER2MAIL_FROMNAME"
+                                />
+                                <field name="emailsubject" type="text"
+                                        default="Order {orderNumber} notification"
+					description="VMSHIPMENT_ORDER2MAIL_SUBJ_DESC"
+					label="VMSHIPMENT_ORDER2MAIL_SUBJ"
+                                />
+
+                                <field name="emailbody" type="textarea" default="&lt;h3&gt;Order {orderNumber}&lt;/h3&gt;{totalProducts} product(s) totaling {orderTotal}&lt;br /&gt;&lt;a  href='{orderLink}' target='_blank'&gt;Order backend details&lt;/a&gt;&lt;br /&gt;&lt;h4&gt;Products:&lt;/h4&gt;{products}&lt;a href='{productLink}' target='_blank'&gt;Visit product&lt;/a&gt;&lt;br /&gt;&lt;h4&gt;Customer:&lt;/h4&gt;{customerName} (&lt;a href='mailto:{customerEmail}'&gt;{customerEmail}&lt;/a&gt;)&lt;br /&gt;Billing:&lt;br /&gt;{customerAddress}&lt;br /&gt;Shipment address:&lt;br /&gt; {customerAddressST}&lt;br /&gt;&lt;br /&gt;Order made from: {ipAddress}&lt;br /&gt;"
+					description="VMSHIPMENT_ORDER2MAIL_EMAILBODY_DESC"
+					label="VMSHIPMENT_ORDER2MAIL_EMAILBODY"
+					filter="raw"
+                                />
+			</fieldset>
+			<fieldset name="next" addfieldpath="/plugins/vmshipment/nst_order2mail/nst_order2mail/elements" label="VMSHIPMENT_ORDER2MAIL_TAB">
+				<field name="rulename"
+				type="text"
+				label="VMSHIPMENT_ORDER2MAIL_RULENAME" default=""
+				description="VMSHIPMENT_ORDER2MAIL_RULENAME_DESC"
+				/>
+				<field name="targets"
+				type="textarea"
+				label="VMSHIPMENT_ORDER2MAIL_TARGETS" default=""
+				description="VMSHIPMENT_ORDER2MAIL_TARGETS_DESC"
+				/>
+                        <field name="emailfile" type="text"
+                                        default=""
+					description="VMSHIPMENT_ORDER2MAIL_EMAILFILE_DESC"
+					label="VMSHIPMENT_ORDER2MAIL_EMAILFILE"
+                                />
+				<field name="orderstates"
+				type="sql"
+				key_field="order_status_code"
+				value_field="conc"
+				query="select *,concat('(',order_status_code,') ',order_status_name) as conc from #__virtuemart_orderstates"
+				label="VMSHIPMENT_ORDER2MAIL_ORDERSTATES"
+				order="order by virtuemart_orderstate_id"
+				multiple="multiple"
+				description="VMSHIPMENT_ORDER2MAIL_ORDERSTATES_DESC"
+				/>				
+				<field type="spacer" name="myliner" label=""  hr="true" />
+				<field name="button"
+				type="button"
+				label="" js="0" />
+				<field type="spacer" name="myspacer" class="text" label="VMSHIPMENT_ORDER2MAIL_CONDITIONS" description="VMSHIPMENT_ORDER2MAIL_CONDITIONS_DESC" />
+				<field name="frontback" type="radio" default="0" label="VMSHIPMENT_ORDER2MAIL_AREAS" description="VMSHIPMENT_ORDER2MAIL_AREAS_DESC">
+					   <option value="0">everywhere</option>
+					   <option value="1">front-end only</option>
+					   <option value="2">back-end only</option>
+				</field>
+				<field type="spacer" name="proddhr" hr="true" />
+				<field type="spacer" name="proddspacer" label="VMSHIPMENT_ORDER2MAIL_PRODSPACER" class="text" />				
+				<field name="products"
+				type="productlist"
+				label="VMSHIPMENT_ORDER2MAIL_PRODUCTS"
+				multiple="multiple" description="VMSHIPMENT_ORDER2MAIL_PRODUCTS_DESC"
+				/>
+				<field name="categories" type="categorylist"
+				 multiple="multiple"
+				 label="VMSHIPMENT_ORDER2MAIL_CATEGS"
+				description="VMSHIPMENT_ORDER2MAIL_CATEGS_DESC" />
+				<field name="vendors"
+				type="virtuemart"
+				key_field="virtuemart_vendor_id"
+				value_field="vendor_store_name"
+				table="vendors"
+				label="VMSHIPMENT_ORDER2MAIL_VENDORS"
+				description="VMSHIPMENT_ORDER2MAIL_VENDORS_DESC"
+				multiple="multiple"
+				/>
+				<field name="manufacturers"
+				type="virtuemart"
+				key_field="virtuemart_manufacturer_id"
+				value_field="mf_name"
+				table="manufacturers"
+				label="VMSHIPMENT_ORDER2MAIL_MANUFACTURERS"
+				description="VMSHIPMENT_ORDER2MAIL_MANUFACTURERS_DESC"
+				multiple="multiple"
+				/>
+				<field type="spacer" name="userdhr" hr="true" />
+				<field type="spacer" name="userdspacer" label="VMSHIPMENT_ORDER2MAIL_USERSPACER" class="text" />
+				<field name="countries"
+				type="countrylist"
+				query="SELECT * FROM #__virtuemart_countries"
+				label="VMSHIPMENT_ORDER2MAIL_COUNTRIES"
+				description="VMSHIPMENT_ORDER2MAIL_COUNTRIES_DESC" value_field="country_name" key_field="virtuemart_country_id" multiple="multiple"
+				/>				
+				<field name="shipmentmethod"
+				type="virtuemart"
+				key_field="virtuemart_shipmentmethod_id"
+				value_field="shipment_name"
+				table="shipmentmethods"
+				label="VMSHIPMENT_ORDER2MAIL_SHIPMENTS"
+				order="order by shipment_name desc"
+				multiple="multiple"
+				description="VMSHIPMENT_ORDER2MAIL_SHIPMENTS_DESC"
+				/>
+				<field name="time"
+				type="intervalfields"
+				label="VMSHIPMENT_ORDER2MAIL_TIME" default="" default1=""
+				description="VMSHIPMENT_ORDER2MAIL_TIME_DESC"
+				/>				
+				<field name="amount"
+				type="intervalfields"
+				label="VMSHIPMENT_ORDER2MAIL_AMOUNT" default="" default1=""
+				description="VMSHIPMENT_ORDER2MAIL_AMOUNT_DESC"
+				/>				
+				<field name="currencies"
+				type="sql"
+				query="select * from #__virtuemart_currencies"
+				label="VMSHIPMENT_ORDER2MAIL_CURRENCIES" multiple="multiple"
+				key_field="virtuemart_currency_id"
+				value_field="currency_name"
+				description="VMSHIPMENT_ORDER2MAIL_CURRENCIES_DESC"
+				/>
+				<field name="paymentmethod"
+				type="virtuemart"
+				key_field="virtuemart_paymentmethod_id"
+				value_field="payment_name"
+				table="paymentmethods"
+				label="VMSHIPMENT_ORDER2MAIL_PAYMENTS"
+				order="order by payment_name desc"
+				multiple="multiple"
+				description="VMSHIPMENT_ORDER2MAIL_PAYMENTS_DESC"
+				/>
+				<field type="spacer" name="disptab" class="text" label="VMSHIPMENT_ORDER2MAIL_DISPTAB" description="VMSHIPMENT_ORDER2MAIL_DISPTAB_DESC" />
+				<field name="manufyn" type="radio" default="0" label="VMSHIPMENT_ORDER2MAIL_MANUFYN" description="VMSHIPMENT_ORDER2MAIL_MANUFYN_DESC">
+					   <option value="0">No</option>
+					   <option value="1">Yes</option>
+				</field>				
+				<field name="vendyn" type="radio" default="0" label="VMSHIPMENT_ORDER2MAIL_VENDYN" description="VMSHIPMENT_ORDER2MAIL_VENDYN_DESC">
+					   <option value="0">No</option>
+					   <option value="1">Yes</option>
+				</field>  
+				<field name="debug" type="radio" default="0" label="VMSHIPMENT_ORDER2MAIL_DEBUG" description="VMSHIPMENT_ORDER2MAIL_DEBUG_DESC">
+				    <option value="0">JNO</option>
+				    <option value="1">JYES</option>
+				</field>
+				<field name="buttonbut"
+				type="button"
+				label="" js="1" />
+                      <field name="shippermail" type="hidden"
+					   default=""
+				description="VMSHIPMENT_ORDER2MAIL_RULES_DESC"
+				label="VMSHIPMENT_ORDER2MAIL_RULES"
+				/>
+
+                        </fieldset>
+
+
+                </fields>
+        </config>
+</install>

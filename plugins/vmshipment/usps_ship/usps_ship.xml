@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension method="upgrade" group="vmshipment" type="plugin" version="2.5">
+    <name>USPS Shipping for Virtuemart</name>
+    <creationDate>November 26 2014</creationDate>
+    <author>Park Beach Systems, Inc</author>
+    <authorUrl>http://www.parkbeachsystems.com</authorUrl>
+    <copyright>Copyright (C) 2008-2014 Park Beach Systems, Inc. All rights reserved.</copyright>
+    <license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <version>6.4.1</version>
+	<updateservers>
+        <!-- Note: No spaces or linebreaks allowed between the server tags -->
+        <server type="extension" name="VirtueMart USPS Shipping Update Site">
+            <![CDATA[http://www.parkbeachsystems.com/releases/plg_vmshipment_usps_update.xml]]></server>
+    </updateservers>
+    <description>
+    	<![CDATA[
+		<div style='font-weight: normal' align='left'>
+			<h1>USPS Shipping for Virtuemart</h1>
+			<p>The USPS Shipping plugin v6.4.1 supports USPS Domestic API v4 and USPS International API v2 using cURL for Virtuemart 2 and Virtuemart 3 running on Joomla 2.5 and Joomla 3.</p>
+			<p><strong style='color: #ff0000;'>Configuration Requirements</strong>
+			<ul>
+				<li><strong style="color: #ff3300">Configure Plugin Settings</strong>
+					<ul style="list-style: disc">
+						<li>Enable the USPS Shipping Plugin from Joomla!'s plugin extension list.</li>
+						<li>Add the USPS Username provided to you by USPS.</li>
+						<li>Request USPS to move your API username to production. This MUST be completed by USPS.</li>
+						<li>If your web server requires the use of a proxy server enter it into the settings.</li>
+					</ul>
+				</li>
+				<li><strong style="color: #ff3300">Configure Virtuemart for USPS Shipping</strong>
+					<ul style="list-style: disc">
+						<li>Add each USPS Shipping Service your store will use (both domestic and international) in Virtuemart's Shop->Shipping Methods area.</li>
+						<li>Ensure each shipping option is Published.</li>
+						<li>Ensure the shop's Bill To Zip/Postal Code is entered under Shop Settings.</li>
+						<li>Add proper weight to each of your products that will require shipping costs.</li>
+					</ul>
+				</li>
+			</ul>
+			</p>
+			<p>Copyright 2013-2014 <a href='http://www.parkbeachsystems.com/' title='Park Beach Systems, Inc.'>Park Beach Systems, Inc</a>.</p>
+		</div>
+		]]>
+	</description>
+    <languages>
+		<language tag="en-GB">en-GB.plg_vmshipment_usps_ship.ini</language>
+    </languages>
+    <files>
+		<filename plugin="usps_ship">usps_ship.php</filename>
+		<filename>index.html</filename>
+		<folder>api</folder>
+    </files>
+   	<config>
+		<fields name="params">
+			<fieldset name="USPS_CONNECTION" label="VMSHIPMENT_USPS_SHIP_CONNECTION">
+				<field name="USPS_USERNAME" type="text" size="20" default="" label="VMSHIPMENT_USPS_SHIP_USERNAME" description="VMSHIPMENT_USPS_SHIP_USERNAME_DESC"/>
+				<field name="USPS_SERVER" type="list" default="PRODUCTION" label="VMSHIPMENT_USPS_SHIP_SERVER" description="VMSHIPMENT_USPS_SHIP_SERVER_DESC">
+		    		<option value="PRODUCTION">PRODUCTION</option>
+		    		<option value="STAGING">STAGING</option>
+		    	</field>
+				<field name="USPS_PROXYSERVER" type="text" size="20" default="" label="VMSHIPMENT_USPS_SHIP_PROXY" description="VMSHIPMENT_USPS_SHIP_PROXY_DESC"/>
+			</fieldset>
+			<fieldset name="USPS_OTHER" label="VMSHIPMENT_USPS_SHIP_OTHER">
+		    	<field name="USPS_PACKAGESIZE" type="list" default="REGULAR" label="VMSHIPMENT_USPS_SHIP_PACKAGESIZE" description="VMSHIPMENT_USPS_SHIP_PACKAGESIZE_DESC">
+					<option value="REGULAR">REGULAR</option>
+					<option value="LARGE">LARGE</option>
+					<option value="OVERSIZE">OVERSIZE</option>
+				</field>
+   				<field name="USPS_PADDING" type="text" size="5" default="0%" label="VMSHIPMENT_USPS_SHIP_PADDING" description="VMSHIPMENT_USPS_SHIP_PADDING_DESC"/>
+				<field name="USPS_MACHINABLE" type="radio" default="0" label="VMSHIPMENT_USPS_SHIP_MACHINABLE" description="VMSHIPMENT_USPS_SHIP_MACHINABLE_DESC">
+			    	<option value="1">Yes</option>
+			    	<option value="0">No</option>
+				</field>	
+				<field name="USPS_SMART_FLATRATE" type="radio" default="0" label="VMSHIPMENT_USPS_SHIP_SMART_FLATRATE" description="VMSHIPMENT_USPS_SHIP_SMART_FLATRATE_DESC">
+			    	<option value="1">Yes</option>
+			    	<option value="0">No</option>
+				</field>
+				<field name="USPS_REPORTERRORS" type="radio" default="1" label="VMSHIPMENT_USPS_SHIP_REPORTERRORS" description="VMSHIPMENT_USPS_SHIP_REPORTERRORS_DESC">
+		    		<option value="1">Yes</option>
+		    		<option value="0">No</option>
+		    	</field>
+				<field name="debug" type="radio" default="0" label="VMSHIPMENT_USPS_SHIP_DEBUG" description="VMSHIPMENT_USPS_SHIP_DEBUG_DESC" >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+	<vmconfig>
+		<fields name="params">
+			<fieldset name="settings">
+				<field name="USPS_SERVICE" type="list" label="VMSHIPMENT_USPS_SHIP_SERVICE" description="VMSHIPMENT_USPS_SHIP_SERVICE_DESC">
+					<option value="Priority Mail Express">Priority Mail Express</option>
+					<option value="Priority Mail Express Hold For Pickup">Priority Mail Express Mail Hold For Pickup</option>
+					<option value="Priority Mail Express Sunday/Holiday Delivery">Priority Mail Express Sunday/Holiday Delivery</option>
+					<option value="Priority Mail Express Flat Rate Boxes">Priority Mail Express Flat Rate Boxes</option>
+					<option value="Priority Mail Express Flat Rate Boxes Hold For Pickup">Priority Mail Express Flat Rate Boxes Hold For Pickup</option>
+					<option value="Priority Mail Express Sunday/Holiday Delivery Flat Rate Boxes">Priority Mail Express Sunday/Holiday Delivery Flat Rate Boxes</option>	
+					<option value="Priority Mail Express Flat Rate Envelope">Priority Mail Express Flat Rate Envelope</option>
+					<option value="Priority Mail Express Flat Rate Envelope Hold For Pickup">Priority Mail Express Flat Rate Envelope Hold For Pickup</option>
+					<option value="Priority Mail Express Sunday/Holiday Delivery Flat Rate Envelope">Priority Mail Express Sunday/Holiday Delivery Flat Rate Envelope</option>
+					<option value="Priority Mail Express Legal Flat Rate Envelope">Priority Mail Express Legal Flat Rate Envelope</option>
+					<option value="Priority Mail Express Legal Flat Rate Envelope Hold For Pickup">Priority Mail Express Legal Flat Rate Envelope Hold For Pickup</option>
+					<option value="Priority Mail Express Sunday/Holiday Delivery Legal Flat Rate Envelope">Priority Mail Express Sunday/Holiday Delivery Legal Flat Rate Envelope</option>
+					<option value="Priority Mail Express Padded Flat Rate Envelope">Priority Mail Express Padded Flat Rate Envelope</option>
+					<option value="Priority Mail Express Padded Flat Rate Envelope Hold For Pickup">Priority Mail Express Padded Flat Rate Envelope Hold For Pickup</option>
+					<option value="Priority Mail Express Sunday/Holiday Delivery Padded Flat Rate Envelope">Priority Mail Express Sunday/Holiday Delivery Padded Flat Rate Envelope</option>
+					<option value="Priority Mail">Priority Mail</option>
+					<option value="Priority Mail Large Flat Rate Box">Priority Mail Large Flat Rate Box</option>
+					<option value="Priority Mail Medium Flat Rate Box">Priority Mail Medium Flat Rate Box</option>
+					<option value="Priority Mail Small Flat Rate Box">Priority Mail Small Flat Rate Box</option>
+					<option value="Priority Mail Flat Rate Envelope">Priority Mail Flat Rate Envelope</option>
+					<option value="Priority Mail Legal Flat Rate Envelope">Priority Mail Legal Flat Rate Envelope</option>
+					<option value="Priority Mail Padded Flat Rate Envelope">Priority Mail Padded Flat Rate Envelope</option>
+					<option value="Priority Mail Gift Card Flat Rate Envelope">Priority Mail Gift Card Flat Rate Envelope</option>
+					<option value="Priority Mail Small Flat Rate Envelope">Priority Mail Small Flat Rate Envelope</option>
+					<option value="Priority Mail Window Flat Rate Envelope">Priority Mail Window Flat Rate Envelope</option>		
+					<option value="First-Class Mail Parcel">First-Class Mail Parcel</option>
+					<option value="First-Class Mail Stamped Letter">First-Class Mail Stamped Letter</option>
+					<option value="First-Class Mail Metered Letter">First-Class Mail Metered Letter</option>
+					<option value="First-Class Mail Postcards">First-Class Mail Postcards</option>
+					<option value="First-Class Mail Large Postcards">First-Class Mail Large Postcards</option>
+					<option value="Standard Post">Standard Post</option>
+					<option value="Media Mail Parcel">Media Mail Parcel</option>
+					<option value="Library Mail Parcel">Library Mail Parcel</option>
+					<option value="USPS GXG Envelopes">USPS GXG Envelopes</option>
+					<option value="Priority Mail Express International">Priority Mail Express International</option>
+					<option value="Priority Mail Express International Flat Rate Boxes">Priority Mail Express International Flat Rate Boxes</option>
+					<option value="Priority Mail Express International Flat Rate Envelope">Priority Mail Express International Flat Rate Envelope</option>
+					<option value="Priority Mail Express International Legal Flat Rate Envelope">Priority Mail Express International Legal Flat Rate Envelope</option>
+					<option value="Priority Mail Express International Padded Flat Rate Envelope">Priority Mail Express International Padded Flat Rate Envelope</option>
+					<option value="Priority Mail International">Priority Mail International</option>
+					<option value="Priority Mail International Large Flat Rate Box">Priority Mail International Large Flat Rate Box</option>
+					<option value="Priority Mail International Medium Flat Rate Box">Priority Mail International Medium Flat Rate Box</option>
+					<option value="Priority Mail International Small Flat Rate Box">Priority Mail International Small Flat Rate Box</option>
+					<option value="Priority Mail International DVD Flat Rate priced box">Priority Mail International DVD Flat Rate priced box</option>
+					<option value="Priority Mail International Large Video Flat Rate priced box">Priority Mail International Large Video Flat Rate priced box</option>
+					<option value="Priority Mail International Flat Rate Envelope">Priority Mail International Flat Rate Envelope</option>
+					<option value="Priority Mail International Legal Flat Rate Envelope">Priority Mail International Legal Flat Rate Envelope</option>
+					<option value="Priority Mail International Padded Flat Rate Envelope">Priority Mail International Padded Flat Rate Envelope</option>
+					<option value="Priority Mail International Gift Card Flat Rate Envelope">Priority Mail International Gift Card Flat Rate Envelope</option>
+					<option value="Priority Mail International Small Flat Rate Envelope">Priority Mail International Small Flat Rate Envelope</option>
+					<option value="Priority Mail International Window Flat Rate Envelope">Priority Mail International Window Flat Rate Envelope</option>
+					<option value="First-Class Package International Service">First-Class Package International Service</option>
+					<option value="First-Class Mail International Large Envelope">First-Class Mail International Large Envelope</option>
+					<option value="First-Class Mail International Letter">First-Class Mail International Letter</option>
+				</field>
+				<field	name="shipment_logos" type="vmfiles" label="VMSHIPMENT_USPS_SHIP_LOGOS"
+							description="VMSHIPMENT_USPS_SHIP_LOGOS_DESC"
+							directory="/images/stories/virtuemart/shipment"
+							default="default" hide_default="1" hide_none="1"
+							stripext="0"   exclude="^_" />
+				<field name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="VMSHIPMENT_USPS_SHIP_TAX" description="VMSHIPMENT_USPS_SHIP_TAX_DESC" />	
+				<field name="USPS_HANDLINGFEE_TYPE" type="list" default="NONE" label="VMSHIPMENT_USPS_SHIP_HANDLING_FEE_TYPE" description="VMSHIPMENT_USPS_SHIP_HANDLING_FEE_TYPE_DESC">
+					<option value="NONE">No Handling Fee</option>
+					<option value="FLAT">Flat Dollar Fee</option>
+					<option value="PCTSHIP">Percentage of Shipping Cost</option>			
+					<option value="PCTCART">Percentage of Total Cart</option>
+				</field>
+				<field name="USPS_HANDLINGFEE" type="text" size="5" default="0" label="VMSHIPMENT_USPS_SHIP_HANDLING_FEE" description="VMSHIPMENT_USPS_SHIP_HANDLING_FEE_DESC"/>
+				<field type="spacer" default="" level="level1" />	         
+				<field name="countries" type="vmcountries"  scope="com_virtuemart" default="" label="VMSHIPMENT_USPS_SHIP_COUNTRIES" description="VMSHIPMENT_USPS_SHIP_COUNTRIES_DESC"/>
+				<field name="zip_start" type="text" size="10" default="" label="VMSHIPMENT_USPS_SHIP_ZIP_START" description="VMSHIPMENT_USPS_SHIP_ZIP_START_DESC"/>
+				<field name="zip_stop" type="text" size="10" default="" label="VMSHIPMENT_USPS_SHIP_ZIP_STOP" description="VMSHIPMENT_USPS_SHIP_ZIP_STOP_DESC"/>
+				<field name="orderamount_start" type="text" size="10" default="" label="VMSHIPMENT_USPS_SHIP_ORDERAMOUNT_START" description="VMSHIPMENT_USPS_SHIP_ORDERAMOUNT_START_DESC"/>
+				<field name="orderamount_stop" type="text" size="10" default="" label="VMSHIPMENT_USPS_SHIP_ORDERAMOUNT_STOP" description="VMSHIPMENT_USPS_SHIP_ORDERAMOUNT_STOP_DESC"/>
+			</fieldset>
+		</fields>
+	</vmconfig>
+	
+	<params addpath="/administrator/components/com_virtuemart/elements">
+		<param type="vmjpluginwarning" />
+		<param name="USPS_SERVICE" type="list" label="VMSHIPMENT_USPS_SHIP_SERVICE" description="VMSHIPMENT_USPS_SHIP_SERVICE_DESC">
+			<option value="Priority Mail Express">Priority Mail Express</option>
+			<option value="Priority Mail Express Hold For Pickup">Priority Mail Express Mail Hold For Pickup</option>
+			<option value="Priority Mail Express Sunday/Holiday Delivery">Priority Mail Express Sunday/Holiday Delivery</option>
+			<option value="Priority Mail Express Flat Rate Boxes">Priority Mail Express Flat Rate Boxes</option>
+			<option value="Priority Mail Express Flat Rate Boxes Hold For Pickup">Priority Mail Express Flat Rate Boxes Hold For Pickup</option>
+			<option value="Priority Mail Express Sunday/Holiday Delivery Flat Rate Boxes">Priority Mail Express Sunday/Holiday Delivery Flat Rate Boxes</option>	
+			<option value="Priority Mail Express Flat Rate Envelope">Priority Mail Express Flat Rate Envelope</option>
+			<option value="Priority Mail Express Flat Rate Envelope Hold For Pickup">Priority Mail Express Flat Rate Envelope Hold For Pickup</option>
+			<option value="Priority Mail Express Sunday/Holiday Delivery Flat Rate Envelope">Priority Mail Express Sunday/Holiday Delivery Flat Rate Envelope</option>
+			<option value="Priority Mail Express Legal Flat Rate Envelope">Priority Mail Express Legal Flat Rate Envelope</option>
+			<option value="Priority Mail Express Legal Flat Rate Envelope Hold For Pickup">Priority Mail Express Legal Flat Rate Envelope Hold For Pickup</option>
+			<option value="Priority Mail Express Sunday/Holiday Delivery Legal Flat Rate Envelope">Priority Mail Express Sunday/Holiday Delivery Legal Flat Rate Envelope</option>
+			<option value="Priority Mail Express Padded Flat Rate Envelope">Priority Mail Express Padded Flat Rate Envelope</option>
+			<option value="Priority Mail Express Padded Flat Rate Envelope Hold For Pickup">Priority Mail Express Padded Flat Rate Envelope Hold For Pickup</option>
+			<option value="Priority Mail Express Sunday/Holiday Delivery Padded Flat Rate Envelope">Priority Mail Express Sunday/Holiday Delivery Padded Flat Rate Envelope</option>
+			<option value="Priority Mail">Priority Mail</option>
+			<option value="Priority Mail Large Flat Rate Box">Priority Mail Large Flat Rate Box</option>
+			<option value="Priority Mail Medium Flat Rate Box">Priority Mail Medium Flat Rate Box</option>
+			<option value="Priority Mail Small Flat Rate Box">Priority Mail Small Flat Rate Box</option>
+			<option value="Priority Mail Flat Rate Envelope">Priority Mail Flat Rate Envelope</option>
+			<option value="Priority Mail Legal Flat Rate Envelope">Priority Mail Legal Flat Rate Envelope</option>
+			<option value="Priority Mail Padded Flat Rate Envelope">Priority Mail Padded Flat Rate Envelope</option>
+			<option value="Priority Mail Gift Card Flat Rate Envelope">Priority Mail Gift Card Flat Rate Envelope</option>
+			<option value="Priority Mail Small Flat Rate Envelope">Priority Mail Small Flat Rate Envelope</option>
+			<option value="Priority Mail Window Flat Rate Envelope">Priority Mail Window Flat Rate Envelope</option>		
+			<option value="First-Class Mail Parcel">First-Class Mail Parcel</option>
+			<option value="First-Class Mail Stamped Letter">First-Class Mail Stamped Letter</option>
+			<option value="First-Class Mail Metered Letter">First-Class Mail Metered Letter</option>
+			<option value="First-Class Mail Postcards">First-Class Mail Postcards</option>
+			<option value="First-Class Mail Large Postcards">First-Class Mail Large Postcards</option>
+			<option value="Standard Post">Standard Post</option>
+			<option value="Media Mail Parcel">Media Mail Parcel</option>
+			<option value="Library Mail Parcel">Library Mail Parcel</option>
+			<option value="USPS GXG Envelopes">USPS GXG Envelopes</option>
+			<option value="Priority Mail Express International">Priority Mail Express International</option>
+			<option value="Priority Mail Express International Flat Rate Boxes">Priority Mail Express International Flat Rate Boxes</option>
+			<option value="Priority Mail Express International Flat Rate Envelope">Priority Mail Express International Flat Rate Envelope</option>
+			<option value="Priority Mail Express International Legal Flat Rate Envelope">Priority Mail Express International Legal Flat Rate Envelope</option>
+			<option value="Priority Mail Express International Padded Flat Rate Envelope">Priority Mail Express International Padded Flat Rate Envelope</option>
+			<option value="Priority Mail International">Priority Mail International</option>
+			<option value="Priority Mail International Large Flat Rate Box">Priority Mail International Large Flat Rate Box</option>
+			<option value="Priority Mail International Medium Flat Rate Box">Priority Mail International Medium Flat Rate Box</option>
+			<option value="Priority Mail International Small Flat Rate Box">Priority Mail International Small Flat Rate Box</option>
+			<option value="Priority Mail International DVD Flat Rate priced box">Priority Mail International DVD Flat Rate priced box</option>
+			<option value="Priority Mail International Large Video Flat Rate priced box">Priority Mail International Large Video Flat Rate priced box</option>
+			<option value="Priority Mail International Flat Rate Envelope">Priority Mail International Flat Rate Envelope</option>
+			<option value="Priority Mail International Legal Flat Rate Envelope">Priority Mail International Legal Flat Rate Envelope</option>
+			<option value="Priority Mail International Padded Flat Rate Envelope">Priority Mail International Padded Flat Rate Envelope</option>
+			<option value="Priority Mail International Gift Card Flat Rate Envelope">Priority Mail International Gift Card Flat Rate Envelope</option>
+			<option value="Priority Mail International Small Flat Rate Envelope">Priority Mail International Small Flat Rate Envelope</option>
+			<option value="Priority Mail International Window Flat Rate Envelope">Priority Mail International Window Flat Rate Envelope</option>
+			<option value="First-Class Package International Service">First-Class Package International Service</option>
+			<option value="First-Class Mail International Large Envelope">First-Class Mail International Large Envelope</option>
+			<option value="First-Class Mail International Letter">First-Class Mail International Letter</option>
+		</param>
+		<param	name="shipment_logos" type="vmfiles" label="VMSHIPMENT_USPS_SHIP_LOGOS"
+	             	description="VMSHIPMENT_USPS_SHIP_LOGOS_DESC"
+	             	directory="/images/stories/virtuemart/shipment"
+	             	default="default" hide_default="1" hide_none="1"
+	             	stripext="0"   exclude="^_" />
+		<param name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="VMSHIPMENT_USPS_SHIP_TAX" description="VMSHIPMENT_USPS_SHIP_TAX_DESC" />	
+		<param name="USPS_HANDLINGFEE_TYPE" type="list" default="NONE" label="VMSHIPMENT_USPS_SHIP_HANDLING_FEE_TYPE" description="VMSHIPMENT_USPS_SHIP_HANDLING_FEE_TYPE_DESC">
+			<option value="NONE">No Handling Fee</option>
+			<option value="FLAT">Flat Dollar Fee</option>
+			<option value="PCTSHIP">Percentage of Shipping Cost</option>			
+			<option value="PCTCART">Percentage of Total Cart</option>
+		</param>
+		<param name="USPS_HANDLINGFEE" type="text" size="5" default="0" label="VMSHIPMENT_USPS_SHIP_HANDLING_FEE" description="VMSHIPMENT_USPS_SHIP_HANDLING_FEE_DESC"/>
+		<param type="spacer" default="" level="level1" />	         
+	    <param name="countries" type="vmcountries"  scope="com_virtuemart" default="" label="VMSHIPMENT_USPS_SHIP_COUNTRIES" description="VMSHIPMENT_USPS_SHIP_COUNTRIES_DESC"/>
+		<param name="zip_start" type="text" size="10" default="" label="VMSHIPMENT_USPS_SHIP_ZIP_START" description="VMSHIPMENT_USPS_SHIP_ZIP_START_DESC"/>
+		<param name="zip_stop" type="text" size="10" default="" label="VMSHIPMENT_USPS_SHIP_ZIP_STOP" description="VMSHIPMENT_USPS_SHIP_ZIP_STOP_DESC"/>
+		<param name="orderamount_start" type="text" size="10" default="" label="VMSHIPMENT_USPS_SHIP_ORDERAMOUNT_START" description="VMSHIPMENT_USPS_SHIP_ORDERAMOUNT_START_DESC"/>
+		<param name="orderamount_stop" type="text" size="10" default="" label="VMSHIPMENT_USPS_SHIP_ORDERAMOUNT_STOP" description="VMSHIPMENT_USPS_SHIP_ORDERAMOUNT_STOP_DESC"/>
+    </params>
+</extension>

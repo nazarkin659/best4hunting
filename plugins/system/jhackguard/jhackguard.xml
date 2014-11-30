@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system">
+    <name>Security - jHackGuard</name>
+    <author>Val Markov</author>
+    <creationDate>Jun 2012</creationDate>
+    <copyright>Copyright (C) 2010-2013 SiteGround.com - All rights reserved.</copyright>
+    <license>GNU/GPL, see LICENSE</license>
+    <authorEmail>val@siteground.com</authorEmail>
+    <authorUrl>http://www.siteground.com/</authorUrl>
+    <version>1.4.2</version>
+    <description>jHackGuard v.1.4.2 is a Joomla 2.5/3.0 security plugin developed by SiteGround. With this plugin your Joomla is protected against the most popular hacking attacks - SQL Injections, Remote URL/File Inclusions, Remote Code Executions and XSS Based Attacks!</description>
+    <files>
+        <filename plugin="jhackguard">jhackguard.php</filename>
+    </files>
+	
+	<config>
+		<fields name="params">
+		    <fieldset name='basic'>
+		          			
+		        <field name="log_file" type="text" default="jhackguard-log.php" label="Log file" />
+						
+		        <field name="logging" type="radio" default="1" label="Enable Logging">
+		            <option value="1">Enable</option>
+		            <option value="0">Disable</option>
+		        </field>
+						
+		        <field name="check_post" type="radio" default="1" label="Filter $_POST">
+		            <option value="1">Enable</option>
+		            <option value="0">Disable</option>
+		        </field>
+						
+		        <field name="check_get" type="radio" default="1" label="Filter $_GET">
+		            <option value="1">Enable</option>
+		            <option value="0">Disable</option>
+		        </field>
+		        <field name="check_cookies" type="radio" default="1" label="Filter $_COOKIE">
+		            <option value="1">Enable</option>
+		            <option value="0">Disable</option>
+		        </field>
+						
+		        <field name="check_eval" type="radio" default="1" label="Filter eval()">
+		            <option value="1">Enable</option>
+		            <option value="0">Disable</option>
+		        </field>
+						
+		        <field name="check_base64" type="radio" default="1" label="Filter base64_decode">
+		            <option value="1">Enable</option>
+		            <option value="0">Disable</option>
+		        </field>
+						
+		        <field name="check_sql" type="radio" default="1" label="Filter SQL commands">
+		            <option value="1">Enable</option>
+		            <option value="0">Disable</option>
+		        </field>
+						
+		        <field name="check_urlfopen" type="radio" default="0" label="Allow_url_fopen">
+		            <option value="0">Off</option>
+		            <option value="1">On</option>
+		        </field>
+						
+		        <field name="check_urlinclude" type="radio" default="0" label="Allow_url_include">
+		            <option value="0">Off</option>
+		            <option value="1">On</option>
+		        </field>
+
+			<field name="strip_user_agent" type="radio" default="1" label="Strip code from user-agent">
+                            <option value="0">Off</option>
+                            <option value="1">On</option>
+                        </field>
+
+			<field name="strict_xss" type="radio" default="1" label="Strict XSS mode">
+                            <option value="0">Off</option>
+                            <option value="1">On</option>
+                        </field>
+
+			<field name="scan_input_keys" type="radio" default="0" label="Scan input keys">
+                            <option value="0">Off</option>
+                            <option value="1">On</option>
+                        </field>
+
+			<field name="disable_file_uploads" type="radio" default="0" label="Disable upload for guests">
+                            <option value="0">Off</option>
+                            <option value="1">On</option>
+                        </field>
+
+			
+			<field name="link_back_sg" type="radio" default="1" label="Link back to SiteGround">
+                            <option value="0">Off</option>
+                            <option value="1">On</option>
+                        </field>
+    	</fieldset>
+	</fields>
+</config>
+<updateservers>
+   <server type="extension" name="jHackGuard Updates">http://download.siteground.com/jhackguard.xml</server>
+</updateservers>
+</extension>

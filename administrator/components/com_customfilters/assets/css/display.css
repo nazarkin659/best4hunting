@@ -1,0 +1,80 @@
+@CHARSET "UTF-8";
+
+.cf_edit_btn {
+	display: block;
+	float: right;
+	width: 18px;
+	height: 18px;
+	background: url(../images/edit.png) center center no-repeat;
+	border: none;
+}
+
+.cf_alias_input {
+	float: left;
+	width: 218px;
+}
+
+.cfDisplayTypes {
+	width: 90px;
+}
+
+.cf_edit_btn:hover {
+	text-decoration: none;
+}
+
+.icon-48-custom_filters {
+	background-image: url(../images/cf_logo_48.png);
+}
+
+#cf_info {
+	text-align: left;
+}
+
+#cf_versioninfo {
+	min-width: 130px;
+	min-height: 10px;
+}
+
+#cfoutdated {
+	color: #ff0000;
+	font-weight: bold;
+}
+
+#cfupdated {
+	color: #007236;
+}
+
+.cfversion_no {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#cfupdate_toolbar {
+	display: none;
+	margin-top: 15px;
+}
+
+.cf_update_btn {
+	display: block;
+	background: url(../images/edit_btn.jpg) top left repeat-x;
+	height: 20px;
+	padding: 0px 5px;
+	line-height: 20px;
+	color: #000;
+	border: 1px solid #bbb;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	width: 10%;
+	float: left;
+	margin-right: 10px;
+	text-align: center;
+}
+
+#cf_copyright_footer {
+	margin-top: 5px;
+}
+
+#cf_jed {
+	float: right;
+}

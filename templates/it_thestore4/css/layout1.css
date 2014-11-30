@@ -1,0 +1,508 @@
+/*---------------------------------------------------------------- 
+  Copyright:
+  Copyright (C) 2008 - 2012 IceTheme. All Rights Reserved
+  
+  License:
+  Copyrighted Commercial Software 
+  
+  Author:
+  IceTheme - http://wwww.icetheme.com
+  
+---------------------------------------------------------------- */
+
+
+/* ---------------------- layout.css --------------------------
+This CSS file contains the stylesheets that are needed to 
+style the layout and the overwall design of the template.
+You will find here all the styles to edit the header, columns,
+etc. 
+* This is the file that you need mostly to edit to change the look
+of your website.
+* Also, notice that to make different colors variations for the 
+template a part of the styles found here need be changed 
+through the styleX.css file (where "X" is the style number that 
+you have chossen through the teplate paramters.
+
+
+/* Note 
+--------
+Also remember you dont need to worry about the size of this 
+CSS file when you see all this comments. The IceSpeed plugin 
+that we provide inside the template package will strip all 
+of this comments plus it will comprees all the CSS in you
+site. For more information on how to use IceSpeed please view 
+the Installation Guide in PDF inside the template package.
+---------------------------------------------------------------- */
+
+
+
+/* 
+Accessibility Feature
+----------------------
+Used in case if the user hase disabled the stylesheets and wants
+to skip to the main parts of the website
+---------------------------------------------------------------- */
+#accessibility{
+	display:none;}
+	
+	
+	
+/* 
+Site Main Wrapping
+------------------
+We use media queries technology to make your website looks great 
+on almost all screen resolutions. Below its the widest width 
+(1200px).
+Please notice that the queries.css stylesheet the width for the 
+wrapper changes according to the screen resolution of your users.
+
+PLEASE BE CAREFUL WHEN WORKING WITH THE .wrapper property.
+---------------------------------------------------------------- */
+.wrapper  { width:960px; margin:0 auto;}
+
+
+
+/* Header 
+----------------*/
+#header {
+	background:#f2f2e6 url(../images/header.jpg) repeat center top;
+	border-bottom:1px solid #D9D9C7;
+	position: relative;}
+	
+	
+	#header:before {		
+  		background: -webkit-linear-gradient(top, rgba(255,255,255,.0), #E6E6D5);
+		background: -o-linear-gradient(top, rgba(255,255,255,.0), #E6E6D5);
+		background: -moz-linear-gradient(top, rgba(255,255,255,.0), #E6E6D5);
+		background: -ms-linear-gradient(top, rgba(255,255,255,.0), #E6E6D5);
+		background: linear-gradient(top, rgba(255,255,255,.0), #E6E6D5);
+		bottom:0;
+		content: "";
+		left:0;
+		display: inline-block;
+		height: 25px;
+		line-height: 0;
+		position: absolute;
+		vertical-align: middle;
+		width: 100%;}	
+				
+				
+
+	#header .wrapper{
+		position:relative;}
+		
+	#topbar{
+		height:30px;
+		margin-bottom: 15px;
+	}
+		#topmenu {
+			float:right;}
+	
+/* Logo
+------------*/	
+#logo{
+	float:left;
+	margin:-5px 0 25px}
+
+
+
+/* Cart
+------------*/
+#ice-cart {
+	margin-left:100px;
+	margin-top:5px;
+	float:right;}
+			
+
+	
+/* Number
+------------*/	
+#contact{
+	float:right;
+	background:url(../images/contact.png) no-repeat center left;
+	font-size:1.3em;
+	margin:8px 0 0 0;
+	padding-left:26px;
+	color:#777;}
+	
+	#contact p {
+		margin:0;}
+					
+	
+/* Promo & Bottom Modules
+contain the CSS for the promo & bottom module positions
+------------*/	
+#promo,
+#bottom {
+	clear:both;
+	position:relative;}
+	
+	#promo {
+		background:#f2f2e6 url(../images/header.jpg) repeat center top;
+		border: 1px solid #d1d1c0;
+		margin-bottom: 15px;
+		padding: 10px 15px 20px;}
+		
+	#bottom {
+		margin:20px 0 0;
+		border-top: 1px dotted #D1D1C0;}
+ 
+
+
+
+
+/* -- Content --
+Contain the CSS for the main and important part of the template
+------------*/
+#content{
+	clear:both;
+	padding:20px 0;
+	background-color:#fff;
+	border-bottom:1px solid #d1d1c0;} 
+			
+	#content_main {
+		position:relative}
+		
+	
+		#middle-column{
+			min-height:450px;
+			width:auto;}			   
+			
+		#left-column {
+			float:left;}
+			
+		#right-column{
+			float:right;}
+			
+			.inside { margin:0; padding:0; }
+			
+				#middle-column .inside { padding:0; min-height:350px;}
+				
+				#right-column .inside { padding-right:0}
+				
+	
+
+	
+
+/* Content Top and Content Bottom Modules
+wraps the content1, content2, content3
+content4, content5 and content6 modules.
+-------------------------------------------*/		
+#content_top {
+	padding-bottom:15px;
+	margin:0 0 15px}
+
+
+#content_bottom {
+	border-top:1px solid #DEDEDE;
+	padding-top:15px;
+	margin:0}
+
+
+/* Banner position */
+#banner{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-bottom: 25px;
+	display: block;}
+
+	/* on the header */
+	#header #banner {
+		float:left;
+		margin:0 0 12px; }
+	
+	/* on the colusmns*/
+	#left-column .bannergroup,
+	#right-column .bannergroup {
+		padding:10px 0}
+	
+
+
+/* -- IceSlideshow --
+ contain the CSS to wrap the IceSlideshow module.
+------------*/	
+#iceslideshow {
+	float:left;
+	padding:0;}
+
+#latest{
+	float:right;}
+	
+	#latest .moduletable-header{
+		background:#ececcb;
+		position:relative;}
+		
+		#latest .moduletable-header:after {
+				border-style: dashed;
+				border-color: transparent;
+				border-width: 1.2em;
+				border-left-width: 1.2em;
+				border-left-style: solid;
+				border-left-color: #fff;
+				content: "";
+				display: inline-block;
+				height: 0;
+				left: 0px;
+				line-height: 0;
+				position: absolute;
+				bottom: 0px;
+				vertical-align: middle;
+				width: 0;}		
+				
+		#latest .moduletable-header:before {
+				border-style: dashed;
+				border-color: transparent;
+				border-width: 1.2em;
+				border-right-width: 1.2em;
+				border-right-style: solid;
+				border-right-color: #fff;
+				content: "";
+				display: inline-block;
+				height: 0;
+				right: 0px;
+				line-height: 0;
+				position: absolute;
+				bottom: 0px;
+				vertical-align: middle;
+				width: 0;}	
+				
+		#latest .moduletable-header h3{
+			text-align:center;
+			color:#555;
+			font-size:1.4em;
+			padding:3px 0;}	
+
+		
+		
+		#latest div.vmgroup ul.vmproduct li {
+			padding:15px 0 0;
+			border-bottom:none}
+
+
+/* IceCarousel */
+#icecarousel {
+	margin-top:-1px;
+	padding:0 0 15px}
+	
+	
+	#icecarousel .ice-module .ice-module-header {
+		border-top: 1px solid #D1D1C0;
+		position:relative;
+		margin:0 0 20px;
+		box-shadow:inset 0 1px 0 #fff;
+		background: #F2F2E6 url(../images/header.jpg) repeat center top;}
+			
+			#icecarousel .ice-module .ice-module-header h3 {
+				font-size:1.5em;
+				padding:3px 0;}
+
+
+
+/* Virtuemart modules
+that appear on the center of the homepage */
+#virtuemart-mods {}
+	
+	#virtuemart-mods .moduletable {
+		margin-bottom:25px}
+		
+		#virtuemart-mods .moduletable .moduletable-header {
+			border-top: 1px solid #D1D1C0;
+			position:relative;
+			box-shadow:inset 0 1px 0 #fff;
+			background: #F2F2E6 url(../images/header.jpg) repeat center top;}
+			
+			#virtuemart-mods .moduletable .moduletable-header:after {
+				border-style: dashed;
+				border-color: transparent;
+				border-width: 0.8em;
+				border-top-width: .8em;
+				border-top-style: solid;
+				border-top-color: #EDEDE1;
+				content: "";
+				display: inline-block;
+				height: 0;
+				left: 10px;
+				line-height: 0;
+				position: absolute;
+				bottom: -18px;
+				vertical-align: middle;
+				width: 0;}		
+			
+				
+				
+			
+			#virtuemart-mods .moduletable .moduletable-header h3 {
+				color:#666;
+				font-size:1.4em;
+				padding:4px 10px}
+					
+			#virtuemart-mods .moduletable div.vmgroup ul:last-child li {
+				border-bottom:none}
+
+			#virtuemart-mods .moduletable div.vmgroup ul li a:first-child {
+				display:block;
+				min-height:100px}
+
+
+/* -- Footer --
+this wrap the footer module position plus the copyright and 
+other elements that you may find on the footer
+------------*/
+#footer {
+	position:relative;
+	overflow:hidden;
+	border-top:1px solid #fff ;}
+
+
+/*  -- Copyright -- 
+this contains the codes for the footer module position and 
+icetheme copyright logo or also the "go to top" link 
+---------------*/
+#copyright {
+    clear: both;
+	border-top: 1px solid #fff;
+	box-shadow:0 -1px 0 #D1D1C0;
+    margin: 0;
+    overflow: hidden;
+    padding: 4px 0 14px;}
+	
+	#copyright .wrapper {
+		position:relative;}
+
+
+	
+	div#copytext { float:left; padding-top:12px; }
+	
+		div#copytext .footer2 { display:none; }
+	
+		
+
+	div#icelogo { float:left; padding:10px 20px 0 0;}
+		div#icelogo p { margin:0;}
+			div#icelogo p a {
+				display:block;
+				float:left;
+				background:url(../images/icetheme.png) no-repeat;
+				width:120px;
+				height:20px;
+				margin:0 auto;
+				opacity:.4;
+				-webkit-transition:all .5s ease-out;
+				-moz-transition:all .5s ease-out;
+				-o-transition:all .5s ease-out; 
+				transition:all .5s ease-out;}
+				div#icelogo p a:hover {
+					opacity:1;}
+					div#icelogo p a span { display:none}
+
+
+
+	/* Go to Top */
+	a#go2top {
+		background:#D6D6BE url(../images/go2top.png) no-repeat center center;
+		border:1px solid rgba(255,255,255,.8);
+		bottom: 10px;
+		right: 10px;
+		opacity:0;
+		width: 20px;
+		height: 16px;
+		padding:4px 6px;
+		position: absolute;
+		-webkit-transition:all .5s ease-out;
+		-moz-transition:all .5s ease-out;
+		-o-transition:all .5s ease-out; 
+		transition:all .5s ease-out;}
+		
+		a#go2top:hover {
+			box-shadow:0 0 12px #C2C29E;}
+			
+		a#go2top span {
+			display:none}
+
+			#footer:hover a#go2top {
+				opacity:1}
+
+
+
+/* Miscellaneous CSS
+------------------------------
+List of CSS codes that can not be categorized above but they may
+be need by Joomla to operate normally. This codes may be used 
+rarely but we reccomend to keep them and to be careful when you
+try to change them
+---------------------------------------------------------------- */
+		
+/* Template Styles custom code */
+ul.ice-template-style {
+	margin:0;
+	padding:0;
+	float:left}
+	ul.ice-template-style li {
+		float:left;
+		margin:0 .5em .5em!important;
+		padding:0!important;
+		list-style-type:none;}
+		
+	ul.ice-template-style li span {
+		display:block;
+		padding:0 0 .3em;
+		font-size:1.4em}	
+
+
+
+/* Articles category module on the "right" position */
+#right-column ul.category-module li {
+	margin-bottom:1em}
+	
+	#right-column ul.category-module li h4 {
+		font-size:1.1em;
+		line-height:1.7em}
+		
+		#right-column ul.category-module li span.mod-articles-category-category {
+			float:left;
+			padding-right:10px;}
+
+
+/* 
+Extensions Overwrites
+----------------------
+Below you will find the CSS codes for the extensions that we
+provide along with this template. Note that almost all the
+extensions found here have their own CSS file on their 
+respective folders. Also note that all the CSS codes here
+overwrite the CSS code on the module folders. That's why we have
+userd the !important feature many times below.
+---------------------------------------------------------------- */
+
+/* IceVmZoom plugin */	
+
+.main-image .zoomPad{border:1px solid #eee;position:relative;z-index:99;cursor:crosshair;}
+	
+	
+.additional-images ul#thumblist {
+	padding:0;
+	margin:0}
+	
+	.additional-images ul#thumblist li {
+		margin-right:5px!important}
+		
+		
+		.additional-images ul#thumblist li a { 
+			border-color:#eee;}
+			
+			.additional-images ul#thumblist li a img {
+				width:auto!important} 
+	
+		
+		.additional-images ul#thumblist li a.zoomThumbActive {
+			border-color:#D1D1C0}
+
+
+	
+	.zoomWrapper {
+		border-color:rgba(61,105,147,.7)!important;}
+	
+	.zoomWrapperTitle {
+		opacity:1!important;
+		background:	rgba(61,105,147,.7)!important;}

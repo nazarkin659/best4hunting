@@ -1,0 +1,1 @@
+<?php die("Access Denied"); ?>#x#O:8:"stdClass":2:{s:5:"route";s:58:"pokhodnoe-snaryazhenie/tovary-dlya-nochlega/spalnye-meshki";s:6:"itemId";s:3:"219";}

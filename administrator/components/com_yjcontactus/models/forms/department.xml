@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- $Id: yjms.xml $ -->
+<form>
+	<fieldset name="department"
+		addfieldpath="/administrator/components/com_yjcontactus/models/fields"
+	>
+
+<!--	<field name="id"  type="text" class="readonly" label="JGLOBAL_FIELD_ID_LABEL"
+			description ="JGLOBAL_FIELD_ID_DESC" size="10" default="0" 
+			readonly="true"  />-->
+		<field name="old_id" type="hidden" />
+
+		<field name="id" type="hidden" />
+		
+		<field name="name" type="text" class="inputbox"
+			size="40" label="COM_YJCONTACTUS_DEPART_NAME"
+			description="COM_YJCONTACTUS_TIP_DEPART_NAME" required="true" />
+			
+<!--	<field name="video_desc" type="textarea" class="inputbox"
+			rows="3" cols="30" label="COM_YJMS_DESCRIPTION"
+			description="" />-->
+
+		<field name="description" type="editor" class="inputbox"
+			label="COM_YJCONTACTUS_DEPART_DESC"	description="COM_YJCONTACTUS_TIP_DEPART_DESCRIPTION"
+			filter="safehtml" buttons="true" width="50%" /><!--hide="readmore,pagebreak"-->
+
+		<field name="message" type="textarea" class="inputbox"
+			label="COM_YJCONTACTUS_DEPART_MESSAGE" description="COM_YJCONTACTUS_TIP_DEPART_MESSAGE"
+			rows="9" cols="30" />
+
+		<field name="upload" type="radio"
+			label="COM_YJCONTACTUS_ALLOW_UPLOAD" description="COM_YJCONTACTUS_TIP_ALLOW_UPLOAD"
+			default="1" class="inputbox"
+		>
+			<option value="0">JNO
+			</option>
+			<option value="1">JYES
+			</option>
+		</field>
+		
+		<field name="enabled" type="radio"
+			label="COM_YJCONTACTUS_DEPART_STATUS" description="COM_YJCONTACTUS_TIP_DEPART_STATUS"
+			default="1" class="inputbox"
+		>
+			<option value="0">COM_YJCONTACTUS_INACTIVE
+			</option>
+			<option value="1">COM_YJCONTACTUS_ACTIVE
+			</option>
+		</field>
+		
+		<field name="published" type="radio"
+			label="COM_YJCONTACTUS_DEPART_PUBLISHED" description="COM_YJCONTACTUS_TIP_DEPART_PUBLISHED"
+			default="1" class="inputbox"
+		>
+			<option value="0">JNO
+			</option>
+			<option value="1">JYES
+			</option>
+		</field>
+		
+		<field name="email" type="text" class="inputbox"
+			size="40" label="COM_YJCONTACTUS_SEND_EMAIL_ADDRESS"
+			description="COM_YJCONTACTUS_TIP_SEND_EMAIL_ADDRESS_DEPARTMENT" required="true" />						
+		<!--onclick="this.form.submit();"-->
+
+	</fieldset>
+</form>

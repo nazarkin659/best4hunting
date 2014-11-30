@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: config.xml 19439 2010-11-10 15:42:23Z chdemko $ -->
+<config>
+	<fieldset name="component"
+		label="COM_YJCONTACTUS_FIELDSET_CONFIG_CLIENT_OPTIONS_LABEL"
+		description="COM_YJCONTACTUS_FIELDSET_CONFIG_CLIENT_OPTIONS_DESC">
+		<field
+			id="remove_db"
+			name="remove_db"
+			type="radio"
+			label="COM_YJCONTACTUS_FIELD_REMOVEDB_LABEL"
+			description="COM_YJCONTACTUS_FIELD_REMOVEDB_DESC"
+			default="0"
+			class="inputbox">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+		</field>
+		<field
+			id="remove_menu"
+			name="remove_menu"
+			type="radio"
+			label="COM_YJCONTACTUS_FIELD_REMOVEMENU_LABEL"
+			description="COM_YJCONTACTUS_FIELD_REMOVEMENU_DESC"
+			default="0"
+			class="inputbox">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+		</field>		
+
+	</fieldset>
+</config>

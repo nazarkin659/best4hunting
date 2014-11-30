@@ -1,0 +1,1 @@
+<?php die("Access Denied"); ?>#x#O:8:"stdClass":2:{s:5:"route";s:49:"zasidki-i-maskirovka/lone-wolf-portativnye-labazy";s:6:"itemId";s:3:"219";}

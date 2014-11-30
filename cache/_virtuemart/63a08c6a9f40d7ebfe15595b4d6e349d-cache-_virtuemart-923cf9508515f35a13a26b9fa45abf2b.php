@@ -1,0 +1,1 @@
+<?php die("Access Denied"); ?>#x#O:8:"stdClass":2:{s:5:"route";s:39:"manki-vaby-primanki/shnurki-dlya-mankov";s:6:"itemId";s:3:"219";}

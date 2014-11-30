@@ -1,0 +1,1 @@
+<?php die("Access Denied"); ?>#x#O:8:"stdClass":2:{s:5:"route";s:82:"odezhda-dlya-okhoty/sitka-gear-kamuflyazh-dlya-okhoty/sitka-gear-perchatki-i-getry";s:6:"itemId";s:3:"219";}

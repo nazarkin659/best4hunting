@@ -1,0 +1,540 @@
+VM Invoice Changelog
+(C) 2011 ARTIO International Co.
+--------------------------------
+
+NOTE: Older versions of VirtueMart 2 are not guaranteed to work with VM Invoice. 
+It's recommanded to use always newest version of VirtueMart, which is currently 2.0.26d and 1.1.9.
+
+NOTE: We try to copy most precisely how VirtueMart saves order prices. 
+If you encounter any bug different than default VM behavior, contact us, so we can fix.
+However, VirtueMart itself can contain bugs pertaining to order prices saving. 
+Thare's not much we can do about it, because we can only copy how VM orders are saved.
+On the other hand, we are able to edit how prices are DISPLAYED on invoice. 
+If you have any idea how to improve displaying/computing prices on invoice, contact us also.
+
+--- 2.0.31 --- [7.3.2014]
+imp - product attributes edit using VM custom fields plugins and Cart variants
+imp - possibility to display totals also in payment currency 
+imp - possibility to display prices on invoice in payment currency (using fixed rate stored in time of order)
+imp - fixed saving payment and shipment details
+fix - fixed displaying payment and shipment details. if available, used are names saved in time of order.
+fix - fixed ajax product search if translation is missing
+fix - fixed registration tab missing from last update
+
+--- 2.0.30 --- [4.3.2014]
+new - hungarian and slovak invoice translations
+imp - Joomla 3.x compatibility (note: VM2 is not yet compatible with J3)
+imp - invoices are created in language saved in time of order (available since VM 2.0.22)
+imp - option to display strikethroughed prices before override, defaultly on
+imp - option to include HTML into body changed to yes/no (backward compatible)
+fix - fixed prices saving incomatibly with VM > 2.0.20
+fix - fixed totals in footer when using template with {subtotal_discounted}
+fix - fixed older TCPDF version from last update, included 6.0.015 again
+fix - minor fixes
+
+--- 2.0.29 --- [21.2.2014]
+imp - VM2: product attributes are rendered using VM functions (and so plugins). you can adjust this behavior in Invoice Items settings.
+imp - VM2: possibility to create now order as guest, config option for default setting
+imp - option to send bcc to items manufacturer(s)
+imp - option to include invoice and delivery note in e-mail body instead of attaching PDF
+imp - new tags inside e-mail body: [%shipmentName%], [%billingEmail%] and [%orderTotal%]
+imp - own template for tax summary and total line
+imp - option to display totals in different currencies
+imp - new replacemenet fields: {boxes}, {packages}, total order weight and more
+fix - fixed coupon and items discount sign if using with VM > 2.0.20
+fix - fixed some untranslated strings from VM
+fix - fixed error when newly created shopper from backend treated sometimes as vendor. in 2.0.28 -> update file included also backward fix for shoppers table.
+fix - improved automatic creation of customer search indexes
+fix - various small fixes
+
+--- 2.0.28 --- [30.9.2013]
+new - orders list sortable by various columns
+new - option to display weight in order editing
+new - filterable shipping field in orders list
+imp - stockable variant children handled a little better
+imp - coupon discount VAT calculation
+fix - negative timestamp
+fix - -100% tax when no tax applicable
+fix - adding products with quotes in their name
+fix - coupon discount included in Subtotal line
+fix - sending e-mail notifications for all statuses
+
+--- 2.0.27 --- [6.8.2013]
+new - config option for translate also product name on invoice
+imp - added filter by invoice date
+imp - added sorting option for invoice batch download
+imp - when adding parent product to order, "generic child variant" field is omitted
+imp - when editing translated product attributes, translation is displayed in tooltip
+fix - fixed multi-linguality support on invoice (translated also vendor, payment and shipment method)
+fix - showing shopper group on invoice
+fix - fixed E-mail configuration not being saved correctly
+
+--- 2.0.26 --- [26.6.2013]
+new - possibility to add custom vendor note to order. this note can be inserted to invoice or in e-mail using tags. enable it in Global Configuration => Order editing => Enable order notes.
+new - separate e-mails configuration for each Content language (in Joomla 1.5 for each front-end language)
+fix - VM2: accurate prices calculation for added/recomputed products
+fix - fixed bug with custom named delivery note file
+fix - translation was not applied to all attributes
+
+--- 2.0.25 --- [10.5.2013] 
+Order editing (VM2):
+new - all price changes are now done by editing calculation rules, then recomputing whole row. see tooltips for help.
+new - selecting product attributes for new product
+new - selecting price (if more prices defined) for new product
+imp - support for price overrides when editing product price
+imp - better editing of product attributes
+
+Customer search: 
+new - auto-creating customer search indexes. prompt is displayed when having more than 100 address records. 
+      this can speed up customer search when you have lot of customers. also config option to disable the prompt.
+imp - improved customer search: searched by separated words, also in phone_1 or virtuemart_userinfo_id fields
+
+Invoice:
+new - config option to not use certain tags on item rows, but use them in footer
+imp - new version of TCPDF (6.0.015) 
+fix - VM2: real attribute titles for VM Custom Textinput plugin
+fix - tax % on total line was displayed even if there were both 0% and other tax rates
+
+Other: 
+fix - fixed wrong VM version comparing
+
+--- 2.0.24 --- [27.2.2013]
+fix - fixed bug from previous version with duplicates lines when product has more images
+fix - fixed error when one image used multiple times
+
+--- 2.0.23 --- [22.2.2013]
+new - {item_image} tag and config options to show product image on invoice
+imp - shipping, payment, subtotal, tax summary and total lines now also works with {tax_price_item} tag
+imp - new version of TCPDF (5.9.205)
+imp - invoices list speed optimalization
+fix - fixed attribute nobr="true". When used for HTML tag, this is not divided between pages. Works only for most outer tags.
+
+--- 2.0.22 --- [29.1.2013]
+fix - when delivery notes enabled, they were sent instead of invoice
+
+--- 2.0.21 --- [16.1.2013]
+new - French front/back end translation
+fix - fixed tmp folder issue with TCPDF
+fix - 500 error (blank page) on invoice since last version
+fix - installation archive created by Joomla! 2.5 ZIP library to fix installation on all systems
+
+--- 2.0.20 --- [7.1.2013]
+new - support for custom ordering of footer lines in items table
+imp - new tags for shipping details: {shipping_cpt}, {shipping_name}, {shipping_desc} 
+imp - support for VM plugin events when creating new order or shopper from backend
+imp - new config options: subtotal column without discount, display tax % rate in Total Tax line
+imp - invoice translations re-work, wider possibility to use Joomla! languages (support overrides, language classes)
+imp - new version of TCPDF (5.9.202)
+imp - VM2: added proper attribute title for Custom Field Dropbox Plugin
+fix - VM2: order number generated directly by VM function (with VM > 2.0.3)
+fix - VM2: product stock adjusted properly when changed ordered quantity
+fix - VM2: order weight stored properly for shipment
+fix - fixed user info saving (with VM > 2.0.14)
+fix - cache folder doesn't use spaces to fix some problems with TCPDF
+fix - removed some Strict errors
+
+--- 2.0.19 --- [3.12.2012]
+fix - fixed javascript file missing on order page (with Joomla! > 1.6)
+
+--- 2.0.18 --- [27.11.2012]
+new - Swedish frontend translation
+new - conditional blocks in template: {lastpage, notlastpage, onepage, notonepage, firstpage, notfirstpage} - see "Possible replacement fields" in template screen
+imp - new version of TCPDF (5.9.198)
+imp - possibility to use strftime() syntax in Date pattern - ability to use translated date (depends on server locales installed)
+imp - VM1: possible to select price per shopper group when adding product
+imp - added custom plugin events
+fix - VM2: pruduct tax wasn't multiplied by quantity (bug since VM 2.0.11)
+fix - VM2: improved discount value (now counts also with calculation rules)
+fix - VM2: fixed error on order save "Catchable fatal error ... vm2ordercalcrules.php on line 99"
+fix - when changed tax rate of product to other and then back, tax price was not recalculated
+fix - VM1: corrected vendor state name
+fix - fixed language files
+
+--- 2.0.17 --- [15.10.2012]
+imp - tax summary is calculated from rounded prices (new config option, defaultly enabled)
+imp - added 2 more possible extra fields
+fix - order's calculation rules fix (if using VM 2.0.11 or 2.0.12, rows with zero amount were in total)
+fix - [%orderNumber%] tag fix
+
+--- 2.0.16 --- [8.10.2012]
+imp - more detailed configuration of invoice totals
+imp - added check if all item's statuses are selected
+imp - invoices opened from front-end are in current language, config option for disable that behavior
+imp - new e-mail replacable fields [%orderPass%] (for VM2) and [%orderURL%]
+imp - config option with default status for new orders
+imp - new version of TCPDF (5.9.193)
+fix - fixed error from previous version when using product description tags
+fix - missing .pdf extension in custom named e-mail attachments
+fix - VM1: state full name displayed rather than 2-code
+fix - VM2: "table orders not found" fix
+
+--- 2.0.15 --- [4.9.2012]
+new - config option to turn off font subsetting (= embedding only part of font into PDF). Can possibly fix bug with some viewers.
+new - tag {seq}, {seq_dot} to display item sequentional number
+new - price tags with {...-words}: contains amount in words (result depend on language)
+new - UK address format
+imp - possibility to select new customer's group
+imp - separate recipient settings for invoice and delivery note 
+imp - removed enclosing <p> and <br>s from product description tags
+imp - new version of TCPDF (5.9.181)
+fix - sometimes wrong edit links
+fix - non-functional save button
+fix - blank page when entered spaces to some field
+
+--- 2.0.14 --- [20.8.2012]
+new - config option to add Bcc. to e-mails
+new - config option for custom attachment filenames
+new - config option for different admin recipient of delivery note
+new - VM2: config option for taking product's discount into tax summary
+new - config options for showing separate lines for total net price, tax and discount
+imp - new version of TCPDF (5.9.179)
+imp - creating new user with same login will add numeric suffix to login
+imp - customer searching also by user ID
+imp - possibility to add customer to VM based only on Joomla! account (and info from User Profile plugin)
+fix - background stretched to whole page without margins
+fix - Joomla 1.6 and more: new user's generated password
+fix - "Update also user default info?" prompt fixed
+fix - VM2: changing order status now uses VM2 code - all plugin events are called
+fix - VM1: subtotal fix
+
+--- 2.0.13 --- [19.7.2012]
+imp - config settings for displaying payment, payment type and it's discount/fee on separate row. 
+imp - new version of TCPDF (5.9.172)
+imp - German frontend update
+fix - invalid customer notify when creating new order
+fix - VM2: shipping address was same as billing
+fix - creating new user with non-transliterable characters (like Cyrillic)
+
+--- 2.0.12 --- [22.6.2012]
+imp - new tags for shipping and payment prices
+imp - new version of TCPDF (5.9.167)
+fix - VM2: php warning when saving user with userfields
+fix - VM2: fatal error when changing order status and notifying customer
+fix - creating new customer with J!1.6 and newer
+
+--- 2.0.11 --- [5.6.2012]
+imp - config option for ordering items on invoice
+imp - config option for removing empty tags (use to clear empty lines on pdf)
+fix - VM1: fixed payment method save for new orders
+fix - fixed installation package
+
+--- 2.0.10 --- [22.5.2012]
+imp - new e-mail replacable field [%orderNumber%]
+imp - ability to enter more e-mail recepients separated by , or ;
+fix - VM2: product attributes show on PDF
+fix - adding new products containing &
+
+--- 2.0.9 --- [14.5.2012]
+imp - config options for behavior of shipping row
+fix - new version of TCPDF (5.9.162) - fixed issue with empty cells
+fix - currencies format fix
+
+--- 2.0.8 --- [9.5.2012]
+new - possibility to upload new .ttf fonts (unicode)
+imp - template tags: {items_count} - number of ordered items, {items_sum} - total quantity of ordered items
+imp - replacable fields in e-mail: [%title%], [%company%] and [%middleName%]
+fix - embedding images in e-mails
+fix - VM1: subtotal mismatch fix (if showing tax summary, only when having single tax rate)
+
+--- 2.0.7 --- [26.4.2012]
+new - Norweigian frontend translation
+fix - frontend translations being replaced by backend ones
+fix - {order_status} in VM1 fixed
+fix - not displaying "State 0", if state not defined
+fix - background image non-displaying fix
+fix - pdf cache not cleared after configuration change
+
+--- 2.0.6 --- [16.4.2012]
+new - new product tags: product_s_desc, product_desc, product_weight, product_weight_unit
+new - VM2: invoice numbering by order number
+imp - updated spanish translation
+fix - VM1: other discount decimals removed in order edit
+
+--- 2.0.5 --- [30.3.2012]
+new - {order_number} tag and possibility to use order number as variable symbol
+new - new tag {order_history} to show order history with date, status and comments
+new - italian translation (frontend and backend), finnish translation (frontend)
+fix - when order deleted, new invoice numbers were not created properly
+fix - extra fields erasing on order save
+fix - customer info javascript fix on J!1.5
+fix - autorun plugin reinstalled
+
+--- 2.0.4 --- [22.3.2012]
+new - option "shipping same as billing" in customer address
+imp - search customer also by e-mail
+imp - VM2: updating also payment and shipment db tables
+fix - VM1: deletion of payment information when saving order
+fix - VM2: updating order status fix
+fix - tag {price_withtax} fixed
+fix - small batch fixes
+
+--- 2.0.3 --- [14.3.2012]
+new - config option for prices rounding (default changed to mathematical)
+imp - configuration re-organization and CSS update
+imp - new fields for {items} table
+imp - customer state/province/region list populated based on country
+imp - template tag without content is removed also with preceding <br>
+fix - small template and calculation fixes 
+
+--- 2.0.2 --- [7.3.2012]
+imp - config option to repeat items header on every page
+imp - config option for extended coupon display
+imp - config option for extended total display
+imp - config option for coupon VAT
+fix - VM2: fixes at order editing and saving
+fix - small fixes in template
+
+--- 2.0.1 --- [5.3.2012]
+fix - VM1 translations fix
+fix - en-GB language override fix
+
+--- 2.0.0 --- [3.3.2012]
+new - support for Joomla! 1.6, 1.7 and 2.5
+new - support for VirtueMart 2.0.2
+fix - fix of {shipping_*} tags showing billing instead
+
+known issues:
+- VM2: changing order status when sending notify e-mail does not trigger VM plugins
+
+--- 1.7.10 --- [25.1.2012]
+imp - template editing for items table
+imp - template fields splitted to captions and values
+imp - config options re-arrangement
+fix - small fixes
+
+--- 1.7.9 --- [4.1.2012]
+imp - new version of TCPDF (1.9.142)
+imp - menu translations
+fix - missing invoice numbering configuration
+fix - some configuration settings reset after save
+fix - warnings during configuration save
+fix - minor fixes in PDF
+
+--- 1.7.8 --- [20.12.2011]
+imp - convert images embedded in mail body
+imp - when adding product to order, calculate price incl. possible discounts
+fix - added check if PDF has been generated for cron mail
+fix - fixed sometimes incorrect mail subject & body in automatic mode
+fix - calculation of 0% tax rate
+
+--- 1.7.7 --- [14.11.2011]
+imp - PHP Tidy library version check + config option to turn off Tidy
+fix - fixed "Invalid argument supplied for foreach()" warning when Autorun plugin is turned on
+
+--- 1.7.6 --- [11.11.2011]
+imp - new config option for generating image paths in PDF
+fix - fixed image paths (sometimes started with two slashes)
+fix - items table not generated when using currency symbols
+
+--- 1.7.5 --- [10.11.2011]
+imp - added function to tidy HTML code before creating PDF
+imp - new version of TCPDF (5.9.134)
+imp - added config option for minimum order id from which automatically assign new invoice numbers (when using own numbering)
+imp - added config option for tax rate matching tolerance
+imp - added config option for vendor logo size
+imp - updated layout of Control panel
+imp - configuration cleanup and reorganization
+fix - removed TCPDF notices in debug mode
+
+--- 1.7.4 --- [8.11.2011]
+imp - changes check for cache regeneration
+fix - AJAX product suggester problem on some servers
+
+--- 1.7.3 --- [4.11.2011]
+imp - TCPDF is loaded only if not loaded yet
+imp - invoice numbers are now created from oldest to newest
+
+--- 1.7.2 --- [27.10.2011]
+fix - missing fixed MultiListSQL error added
+fix - template body not defined (sometimes templates not installed at 1.7.0 installation)
+fix - image paths changed back to relative
+
+--- 1.7.1 --- [26.10.2011]
+new - added debug mode option
+imp - batch pre-generating also already cached PDFs
+imp - searching producs also by SKU
+fix - batch downloading invoices
+fix - MultiListSQL error
+fix - relative image paths in PDF set to absolute
+
+--- 1.7.0 --- [21.10.2011]
+new - invoice and delivery note template editing
+new - orders and i	nvoices batch processing
+new - invoice prefix editing. Prefixes are saved separately for every invoice. 
+	  By default, "Numbering prefix" configuration us used for new invoices.
+new - invoice date editing. By default, date from "Invoice date" configuration is used for new invoices.
+new - config option for standard or american address format
+new - config option to add background image
+imp - allow selecting more desired order statuses to send/generate invoice than one
+imp - editing delivery note email subject and body separately
+imp - config options for default vendor and currency
+imp - button to apply order status to all items
+imp - improved pre-caching: subdirectories in Joomla! tmp folder by order month
+imp - show only payments enabled in VM
+fix - sometimes inappropriate admin language fix
+fix - add same product more times
+
+--- 1.6.1 --- [17.9.2011]
+new - option to show shipping details
+imp - improved and better structured order editing GUI
+fix - tax rates displayed properly
+
+--- 1.6.0 --- [1.9.2011]
+new - option to show customer number
+new - option to show shopper group
+new - possibility to add "own product" into order
+imp - order address editing improvement (
+       possibility to add new customer, 
+       all shipping addresses are provided at customer search, 
+       possibility to also change customer default address data)
+fix - payment method is saved in new order
+fix - adding new products sometimes deleted addresses
+
+--- 1.5.8 --- [3.8.2011]
+fix - shipping tax and tax rate calculation
+fix - invoices are generated always in site default language 
+      (if not overriden by 'use customer language')
+
+--- 1.5.7 --- [1.8.2011]
+fix - division by zero error bug fix
+
+--- 1.5.6 --- [25.7.2011]
+new - added option to generate invoice in customer language
+new - possibility to add/change invoice number at invoices list
+new - added option to show shipping date at invoice
+imp - VirtueMart products stock and sales update when editing order
+fix - sometimes "tax summary" showed only taxes for shipping
+
+--- 1.5.5 --- [16.7.2011]
+new - updated product attributes editing
+new - minor changes in order items editing GUI
+fix - when selected own numbering, new invoices are not created until order 
+      reaches defined state
+fix - patched bugs from VM causing wrong data display at order edit form
+fix - shipping costs tax calculation improved at order edit form
+fix - address display when "both - always" and "shipping"
+
+--- 1.5.4 --- [13.7.2011]
+imp - added possibility to add/update order coupon
+imp - added config option to where from get product final price (calculate it
+      from base and VAT or take directly from VM order table)
+
+--- 1.5.3 --- [8.7.2011]
+new - added option to display quantity units (in invoices or DN)
+imp - added posibility to edit user fields from order
+fix - fixed problems with some order selects showing language constants instead 
+      of original values (mainly in DE language)
+fix - added missing *.z font files
+
+--- 1.5.2 --- [2.7.2011]
+fix - problems with file download (wrong headers)
+
+--- 1.5.1 --- [22.6.2011]
+new - replacable fields [%invoiceID%], [%orderID%], [%secondName%], [%firstName%] in e-mails
+new - added config option whether to show customer note (in invoice or in DN)
+new - added config option whether to display product attributes in invoice
+new - PDF pre-caching; one-time PDF generation + option to generate all missing invoices
+new - added possibility to change order state directly from invoices list
+imp - added option to customer notify on state change
+imp - possibility to translate invoice / DN filenames
+fix - shipping method display rework
+
+--- 1.5.0 --- [27.5.2011]
+new - creating new customers and orders manually 
+new - advanced and fast order editing 
+
+--- 1.4.10 --- [28.03.2011]
+fix - buffer cleaning re-added to prevent TCPDF Output error
+
+--- 1.4.9 --- [21.03.2011]
+fix - fixed mailing settings (shopper / shopkeeper)
+
+--- 1.4.8 --- [14.03.2011]
+fix - fixed currency display format. Loads from VirtueMart
+
+--- 1.4.7 --- [10.03.2011]
+fix - fixed logics in testing if shipping exists
+
+--- 1.4.6 --- [10.03.2011]
+fix - customer info is loaded from vm_order_user_info
+
+--- 1.4.5 --- [04.03.2011]
+fix - currencyDisplay conflict with VM fix
+
+--- 1.4.4 --- [28.02.2011]
+imp - added missing DB index - speed improvement
+imp - added email existence checking
+
+--- 1.4.3 --- [14.02.2011]
+new - multimailing tool added
+imp - order statuses loaded from VirtueMart
+imp - batch sending order reversed (from oldest to newest)
+imp - added frontend NL translation file
+imp - updated DE translation files
+fix - loading customer emails from order, not user account
+
+--- 1.4.2 --- [25.01.2011]
+fix - removed warning error when no images
+fix - different way of loading files to prevent errors
+
+--- 1.4.1 --- [24.01.2011]
+fix - image paths when no site root is defined
+fix - bug when sending emails automatically
+
+--- 1.4.0 --- [20.01.2011]
+new - header and footer options
+new - page number generation
+new - option to show payment type
+new - updated TCPDF library to v5.9.046
+new - new fonts available
+imp - added mailing options
+fix - removed Notice level messages
+
+--- 1.3.4 --- [14.01.2011]
+new - added possibility of variable symbol generation
+
+--- 1.3.3 --- [06.01.2011]
+fix - own invoice numbering - make sure to add zeros before invoice number
+
+--- 1.3.2 --- [05.01.2011]
+new - added option for invoice date type selection (create/modify/current)
+imp - added back-end menu translations
+
+--- 1.3.1 --- [28.12.2010]
+fix - support for address_2  and state fields in addresses
+fix - removed output buffer clean notice error 
+
+--- 1.3.0 --- [28.11.2010]
+new - added option of own invoice numbering with prefix
+new - added options for taxable payment date and maturity date 
+imp - added translation on extra customer fields
+imp - translation completed (CZ, DE, EN, SK) 
+
+--- 1.2.3 --- [23.11.2010]
+fix - tax summary bugfix
+add - new option for address display (both - always, both if different)
+add - new option to show subtotal
+
+--- 1.2.2 --- [22.11.2010]
+imp - front-end language cleanup
+add - added German translations
+
+--- 1.2.1 --- [21.11.2010]
+fix - front-end loading error fix
+
+--- 1.2.0 --- [20.11.2010]
+imp - front-end unauthorized message
+fix - invoice front-end access authorization fix
+fix - plugin errors fixed
+fix - pdf product price removed for delivery note
+imp - pdf new amounts in table
+imp - pdf tax summary setting
+imp - pdf SKU for products
+imp - pdf label for dates
+imp - pdf can display both adresses (delivery and billing)
+imp - pdf can display vat id and company id now
+imp - new config to select mail settings
+imp - speed optimization, duplicated query removal
+
+--- 1.1.2 --- [09.11.2010]
+fix - online updater Download ID length check fix

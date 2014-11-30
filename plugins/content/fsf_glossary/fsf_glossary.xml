@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content">
+  <name>Content - Freestyle FAQs Glossary</name>
+  <author>Freestyle Joomla</author>
+  <creationDate>2014-07-04</creationDate>
+  <authorEmail>support@freestyle-joomla.com</authorEmail>
+  <authorUrl>http://www.freestyle-joomla.com</authorUrl>
+  <author>Freestyle Joomla</author>
+  <copyright>Copyright Freestyle Joomla 2010</copyright>
+  <license>Please see http://www.freestyle-joomla.com/license for software license</license>
+  <version>1.11.12</version>
+  <description>Content - Freestyle FAQs Glossary</description>
+  <files>
+    <filename plugin="fsf_glossary">fsf_glossary.php</filename>
+  </files>
+</extension>
